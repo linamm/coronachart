@@ -1,18 +1,25 @@
 
 //TODO: refactor this to a generic function.
 const getAdjustFactor = (cases, point_latest) => {
-  const weight = 0.7; //Give the date closer higher weighing.
+  // Give the date closer higher weighing. Give a higher weight if we think the current trend is here to stay, otherwise, give it lower.
+  // When unsure, give 0.5.
+  const weight = 0.5; 
   const remainingWeight = 1 - weight;
   const adjustFactorOne = getSingleAdjucstFactor(cases, point_latest);
   const adjustFactorTwo = getSingleAdjucstFactor(cases, point_latest - 1);
   const adjustFactorThree = getSingleAdjucstFactor(cases, point_latest - 2);
+  const adjustFactorFour = getSingleAdjucstFactor(cases, point_latest - 3);
 
-  return adjustFactorOne * weight + adjustFactorTwo * remainingWeight * weight + adjustFactorThree * remainingWeight * remainingWeight;
-}
+
+  return adjustFactorOne * weight + adjustFactorTwo * remainingWeight * weight + adjustFactorThree * remainingWeight * remainingWeight * weight + 
+  adjustFactorThree * remainingWeight * remainingWeight * remainingWeight;
+};
 
 const getSingleAdjucstFactor = (cases, index) => {
-  return  (cases[index].uk - cases[index - 1].uk) / (cases[index].uk_predict - cases[index - 1].uk);
-}
+  const factor = (cases[index].uk - cases[index - 1].uk) / (cases[index].uk_predict - cases[index - 1].uk);
+//  console.log('adjust factor');
+  return factor;
+};
 
 //Predict the cases
 export const getPredictCases = (cases, point_latest) => {
@@ -35,4 +42,4 @@ export const getPredictCases = (cases, point_latest) => {
   }
   console.log(JSON.stringify(temp));
   return temp;
-}
+};

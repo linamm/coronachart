@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import { Label, Legend, LineChart, XAxis, YAxis, Tooltip, Line, CartesianGrid } from 'recharts';
 import { totalCases, fatalityCases } from './Data.js'; 
 import ReactGA from 'react-ga';
@@ -40,16 +41,15 @@ const styles = {
       </div>
 
       <div style={styles.paragraph}>
-        On the 24th of March, the predicted death is 413 while the actual is 422. At same stage in Italy, the number is 463. The prediction, the actual and Italy (the past) are presenting very similar, comparable numbers. However, on the same day, the predicted total cases is 8407, the actual is 8077 while Italy is 15113. These numbers are very different. This is difficult to explain.
-        UK has similar health system to Italy, yet, the fatality rate in the UK is much higher. A plausible explaination could be that the testing coverage in the UK is much lower, this could be due to a very high number of infected people with mild symptoms are, hopefully self isolating, without being counted into the statistics. Alternatively, this could be highlighting that the testing capacity in the UK is a real bottle neck and there is just not enough testing going on to reveal the real numbers.
+          On 25th of March, the actual total cases was much higher than predicted. This is more inline with the Italy trend, which could be a result of testing capacity increase. The actual fatality cases was much lower than predicted, which is an indication of patient care is mananged well. So, in the editor's oppinion, this is very good news! Things are improving :)
       </div>
 
       <div style={styles.paragraph}>
-          <b>The predicted total cases by the 25th of March is 9021 and nearly  15,000 cases by the 30th of March.</b>
+          <b>The predicted total cases by the 26th of March is 11402 and over 20,000 cases by the 31st of March.</b>
       </div>
      <div style={styles.paragraph}>
       <b>
-      The predicted number of fatalities is 548 on the 25th of March and close to 2000 by 1st of April. The total fatality cases will surpass China arround the 6th of March. Considering China has nearly 1.4 billion people, while there is only 63 million in the UK, the impact from coronavirus for the UK will be much higher.
+      The predicted number of fatalities is 549 on the 26th of March and over 1500 by 4th of April. This is looking a much better outcome than Italy now. Hope this trend stays or improve further.
         </b>       
       </div>
         <div style={styles.paragraph}>
