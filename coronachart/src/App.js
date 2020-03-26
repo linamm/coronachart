@@ -41,15 +41,16 @@ const styles = {
       </div>
 
       <div style={styles.paragraph}>
-          On 25th of March, the actual total cases was much higher than predicted. This is more inline with the Italy trend, which could be a result of testing capacity increase. The actual fatality cases was much lower than predicted, which is an indication of patient care is mananged well. So, in the editor's oppinion, this is very good news! Things are improving :)
+        Editor's Analysis (7pm, 26 March):
+          The prediction on the 26th of March was very close to actual, which indicates a stable trend. Introduction of a 'Lock down' in the UK on 23th March was at similar stage as in Italy. In a few days time, we should be able to tell if the UK lock down is more effective than that has been in Italy. The number of fatalities is taking a slight upward trend today. This could just be a fluctuation due to the low number yesterday. Generally, the UK is looking like to be doing better than Italy, but, non the less, still a very scary outlook.
       </div>
 
       <div style={styles.paragraph}>
-          <b>The predicted total cases by the 26th of March is 11402 and over 20,000 cases by the 31st of March.</b>
+          <b>The predicted total cases by the 27th of March is 13468 and over 20,000 cases by the 31st of March.</b>
       </div>
      <div style={styles.paragraph}>
       <b>
-      The predicted number of fatalities is 549 on the 26th of March and over 1500 by 4th of April. This is looking a much better outcome than Italy now. Hope this trend stays or improve further.
+      The predicted number of fatalities is 690 on the 27th of March and close to 2000 by the 3rd of April.
         </b>       
       </div>
         <div style={styles.paragraph}>
