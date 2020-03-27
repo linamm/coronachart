@@ -41,16 +41,18 @@ const styles = {
       </div>
 
       <div style={styles.paragraph}>
-        Editor's Analysis (4pm, 27 March):
-          The new number of fatality has spiked today, which is much higher than predicted. This sudden spike might be a sign that the NHS is reaching the breaking point fast.
-      </div>
+        Editor's Analysis (8pm, 27 March):
+          The new number of fatality has spiked today, which is much higher than predicted. This sudden spike might be a sign that the NHS is reaching the breaking point fast. The number of new cases was higher than expected as well, the rate of growth is looking scary again, tracking more closely to what was happening in Italy. This is very alarming. Hopefully, the lockdown effect is yet to kick in and we will see a slow down in the coming few days.
+
+          Coupling with the news of both the UK Prime Minister and the Health Secretary has been confirmed to be tested positive, there is an additional risk of the effort of tackling this crisis might get affected. It has been a very bad day!! :(
+        </div>
 
       <div style={styles.paragraph}>
-          <b>The predicted total cases by the 27th of March is 13468 and over 20,000 cases by the 31st of March.</b>
+          <b>The predicted total cases by the 28th of March is 17109 and over 30,000 cases by the 1st of April and almost doubling in just 5 days.</b>
       </div>
      <div style={styles.paragraph}>
       <b>
-      The predicted number of fatalities is 944 on the 28th of March and over 2000 by the 3rd of April.
+      The predicted number of fatalities is 944 on the 28th of March and over 2000 by the 2nd of April. 
         </b>       
       </div>
         <div style={styles.paragraph}>

@@ -50,7 +50,7 @@ const raw_total_cases = [
   {"name": "24", "it": 15113,'uk': 8077, 'uk_predict': 8407},
   {"name": "25", "it": 17660, 'uk': 9529, 'uk_predict': 9021},
   {"name": "26", "it": 21157, 'uk': 11568, 'uk_predict': 11402},
-  {"name": "27","it": 24747,},
+  {"name": "27","it": 24747,'uk': 14578, 'uk_predict': 13468},
   {"name": "28","it": 27980,},
   {"name": "29","it": 31506,},
   {"name": "30","it": 35713,},
@@ -62,7 +62,7 @@ const raw_total_cases = [
 
 ];
 
-export const totalCases = getPredictCases(raw_total_cases, 20);
+export const totalCases = getPredictCases(raw_total_cases, 21);
 export const fatalityCases = getPredictCases(raw_death_cases, 13);
 
 
