@@ -48,11 +48,11 @@ const styles = {
         </div>
 
       <div style={styles.paragraph}>
-          <b>The predicted total cases by the 28th of March is 17109 and over 30,000 cases by the 1st of April and almost doubling in just 5 days.</b>
+          <b>The predicted total cases by the 28th of March is 16866 and over 30,000 cases by the 1st of April and almost doubling in just 5 days.</b>
       </div>
      <div style={styles.paragraph}>
       <b>
-      The predicted number of fatalities is 944 on the 28th of March and over 2000 by the 2nd of April. 
+      The predicted number of fatalities is 958 on the 28th of March and over 2000 by the 1st of April.
         </b>       
       </div>
         <div style={styles.paragraph}>

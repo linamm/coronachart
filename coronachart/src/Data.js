@@ -62,7 +62,10 @@ const raw_total_cases = [
 
 ];
 
-export const totalCases = getPredictCases(raw_total_cases, 21);
-export const fatalityCases = getPredictCases(raw_death_cases, 13);
+export const totalCaseStartDay = 6;
+export const fatalityCaseStartDay = 14;
+export const Today = 27;
+export const totalCases = getPredictCases(raw_total_cases, Today - totalCaseStartDay);
+export const fatalityCases = getPredictCases(raw_death_cases, Today - fatalityCaseStartDay);
 
 
