@@ -17,7 +17,7 @@ import { getPredictCases } from './Predict.js';
   {"name": "24", "it": 463, 'uk': 422, 'uk_predict': 413},
   {"name": "25", "it": 631, 'uk': 465, 'uk_predict': 548},
   {"name": "26", "it": 827, 'uk': 578, 'uk_predict': 549},
-  {"name": "27", "it": 1016,},
+  {"name": "27", "it": 1016,'uk': 759, 'uk_predict': 690},
   {"name": "28", "it": 1266,},
   {"name": "29", "it": 1441,},
   {"name": "30", "it": 1809, },
@@ -63,6 +63,6 @@ const raw_total_cases = [
 ];
 
 export const totalCases = getPredictCases(raw_total_cases, 20);
-export const fatalityCases = getPredictCases(raw_death_cases, 12);
+export const fatalityCases = getPredictCases(raw_death_cases, 13);
 
 
