@@ -77,6 +77,7 @@ const styles = {
           <Tooltip />
           <Legend verticalAlign="top" height={36}/>
           <Line name="Total Cases in Italy" type="monotone" dataKey="it" stroke="#008c45" yAxisId={0} />
+          <Line name="Total Cases in Netherland" type="monotone" dataKey="nl" stroke="#aaaaaa" yAxisId={0} />
           <Line name="Total Cases in the UK" type="monotone" dataKey="uk" stroke="#00247d" yAxisId={0} />
           <Line name="Predicted Total Cases in the UK" type="monotone" dataKey="uk_predict" stroke="#cf142b" yAxisId={0} />
         </LineChart>
@@ -99,6 +100,7 @@ const styles = {
           <Tooltip />
           <Legend verticalAlign="top" height={36}/>
           <Line name="Fatality in Italy" type="monotone" dataKey="it" stroke="#008c45" yAxisId={0} />
+          <Line name="Fatality in Netherland" type="monotone" dataKey="nl" stroke="#aaaaaa" yAxisId={0} />
           <Line name="Fatality in the UK" type="monotone" dataKey="uk" stroke="#00247d" yAxisId={0} />
           <Line name="Predicted Fatality in the UK" type="monotone" dataKey="uk_predict" stroke="#cf142b" yAxisId={0} />
         </LineChart>
