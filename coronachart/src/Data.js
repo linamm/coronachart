@@ -18,7 +18,7 @@ import { getPredictCases } from './Predict.js';
   {"name": "25", "it": 631, 'uk': 465, 'uk_predict': 548, "nl": 356},
   {"name": "26", "it": 827, 'uk': 578, 'uk_predict': 549, "nl": 434},
   {"name": "27", "it": 1016,'uk': 759, 'uk_predict': 690, "nl": 546},
-  {"name": "28", "it": 1266,},
+  {"name": "28", "it": 1266,'uk': 1019, 'uk_predict': 958},
   {"name": "29", "it": 1441,},
   {"name": "30", "it": 1809, },
   {"name": "31", "it": 2158,},
@@ -51,7 +51,7 @@ const raw_total_cases = [
   {"name": "25", "it": 17660, 'uk': 9529, 'uk_predict': 9021, "nl": 6412},
   {"name": "26", "it": 21157, 'uk': 11568, 'uk_predict': 11402, "nl": 7431},
   {"name": "27","it": 24747,'uk': 14578, 'uk_predict': 13468, "nl": 8603},
-  {"name": "28","it": 27980,},
+  {"name": "28","it": 27980,'uk': 17089, 'uk_predict': 16866},
   {"name": "29","it": 31506,},
   {"name": "30","it": 35713,},
   {"name": "31","it": 41035,},
@@ -64,7 +64,7 @@ const raw_total_cases = [
 
 export const totalCaseStartDay = 6;
 export const fatalityCaseStartDay = 14;
-export const Today = 27;
+export const Today = 28;
 export const totalCases = getPredictCases(raw_total_cases, Today - totalCaseStartDay);
 export const fatalityCases = getPredictCases(raw_death_cases, Today - fatalityCaseStartDay);
 
