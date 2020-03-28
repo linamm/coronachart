@@ -43,6 +43,7 @@ const styles = {
       <div style={styles.paragraph}>
         Editor's Analysis (10pm, 27 March):
           Another bad day for nubmer of fatilities, which put the trend in the UK increasingly closer to Italy, which is a pretty dreadful outlook.
+          Added data from China for comparison. China went to lock down (23rd of Jan) when there is only arround 800 cases, the total cases start to show a slowing down trend from arround 20 days after the lock down. Uk official lock down is 23rd of March, although, Uk has announced social distancing and closing pubs a few days before. If UK follows a similar pattern, we will start to see the new cases slow down mid April. Fatality rate will start to slow down about 10 days after that.
         </div>
 
       <div style={styles.paragraph}>
@@ -76,7 +77,9 @@ const styles = {
           <Legend verticalAlign="top" height={36}/>
           <Line name="Total Cases in Italy" type="monotone" dataKey="it" stroke="#008c45" yAxisId={0} />
           <Line name="Total Cases in the UK" type="monotone" dataKey="uk" stroke="#00247d" yAxisId={0} />
-          <Line name="Predicted Total Cases in the UK" type="monotone" dataKey="uk_predict" stroke="#cf142b" yAxisId={0} />
+          <Line name="Total Cases in China" type="monotone" dataKey="cn" stroke="#DE2910" yAxisId={0} />
+
+          <Line name="Predicted Total Cases in the UK" type="monotone" dataKey="uk_predict" stroke="#aaaaaa" yAxisId={0} />
         </LineChart>
       </div>
 
@@ -98,7 +101,7 @@ const styles = {
           <Legend verticalAlign="top" height={36}/>
           <Line name="Fatality in Italy" type="monotone" dataKey="it" stroke="#008c45" yAxisId={0} />
           <Line name="Fatality in the UK" type="monotone" dataKey="uk" stroke="#00247d" yAxisId={0} />
-          <Line name="Predicted Fatality in the UK" type="monotone" dataKey="uk_predict" stroke="#cf142b" yAxisId={0} />
+          <Line name="Predicted Fatality in the UK" type="monotone" dataKey="uk_predict" stroke="#aaaaaa" yAxisId={0} />
         </LineChart>
         </div>
         <div style={styles.paragraph}>
