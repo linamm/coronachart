@@ -41,9 +41,10 @@ const styles = {
       </div>
 
       <div style={styles.paragraph}>
-        Editor's Analysis (10pm, 27 March):
+        Editor's Analysis (11pm, 27 March):
           Another bad day for nubmer of fatilities, which put the trend in the UK increasingly closer to Italy, which is a pretty dreadful outlook.
-          Added data from China for comparison. China went to lock down (23rd of Jan) when there is only arround 800 cases, the total cases start to show a slowing down trend from arround 20 days after the lock down. Uk official lock down is 23rd of March, although, Uk has announced social distancing and closing pubs a few days before. If UK follows a similar pattern, we will start to see the new cases slow down mid April. Fatality rate will start to slow down about 10 days after that.
+          Added data from China for comparison. China went to lock down (23rd of Jan) when there is only arround 800 cases, the total cases start to show a slowing down trend from arround 20 days after the lock down. Uk official lock down is 23rd of March (over 6000 cases), although, UK has announced social distancing and closing pubs a few days before, also the additional shielding of 1.2 million vounerable people. If UK follows a similar pattern like China, we will start to see the new cases slow down arround mid April. Fatality rate will start to slow down about 10 days after that.
+          UK lock down happened at a much later stage than that of China, but, slightly earlier than Italy. An earlier lockdown in China and Korean has proved to achieve lower fatality rate. The effect of UK approach is yet to be seen.
         </div>
 
       <div style={styles.paragraph}>
@@ -78,7 +79,6 @@ const styles = {
           <Line name="Total Cases in Italy" type="monotone" dataKey="it" stroke="#008c45" yAxisId={0} />
           <Line name="Total Cases in the UK" type="monotone" dataKey="uk" stroke="#00247d" yAxisId={0} />
           <Line name="Total Cases in China" type="monotone" dataKey="cn" stroke="#DE2910" yAxisId={0} />
-
           <Line name="Predicted Total Cases in the UK" type="monotone" dataKey="uk_predict" stroke="#aaaaaa" yAxisId={0} />
         </LineChart>
       </div>
@@ -99,8 +99,9 @@ const styles = {
           <YAxis dataKey="it"/>
           <Tooltip />
           <Legend verticalAlign="top" height={36}/>
-          <Line name="Fatality in Italy" type="monotone" dataKey="it" stroke="#008c45" yAxisId={0} />
-          <Line name="Fatality in the UK" type="monotone" dataKey="uk" stroke="#00247d" yAxisId={0} />
+          <Line name="Fatalities in Italy" type="monotone" dataKey="it" stroke="#008c45" yAxisId={0} />
+          <Line name="Fatalities in the UK" type="monotone" dataKey="uk" stroke="#00247d" yAxisId={0} />
+          <Line name="Fatalities in China" type="monotone" dataKey="cn" stroke="#DE2910" yAxisId={0} />
           <Line name="Predicted Fatality in the UK" type="monotone" dataKey="uk_predict" stroke="#aaaaaa" yAxisId={0} />
         </LineChart>
         </div>
