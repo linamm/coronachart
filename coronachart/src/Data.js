@@ -26,6 +26,13 @@ import { getPredictCases } from './Predict.js';
   {"name": "2", "it": 2978,},
   {"name": "3", "it": 3405,},
   {"name": "4", "it": 4032,},
+  {"name": "5", "it": 4825,},
+  {"name": "6", "it": 5475,},
+  {"name": "7", "it": 6077,},
+  {"name": "8", "it": 7503,},
+  {"name": "9", "it": 8215,},
+  {"name": "10", "it": 9134,},
+  {"name": "11", "it": 10023,},
 ];
 
 const raw_total_cases = [
@@ -59,6 +66,10 @@ const raw_total_cases = [
   {"name": "2","it": 53578,},
   {"name": "3","it": 59138,},
   {"name": "4","it": 63927,},
+  {"name": "5","it": 69176,},
+  {"name": "6","it": 74386,},
+  {"name": "7","it": 80589,},
+  {"name": "8","it": 86498,},
 
 ];
 

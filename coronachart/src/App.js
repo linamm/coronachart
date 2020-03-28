@@ -41,18 +41,16 @@ const styles = {
       </div>
 
       <div style={styles.paragraph}>
-        Editor's Analysis (8pm, 27 March):
-          The new number of fatality has spiked today, which is much higher than predicted. This sudden spike might be a sign that the NHS is reaching the breaking point fast. The number of new cases was higher than expected as well, the rate of growth is looking scary again, tracking more closely to what was happening in Italy. This is very alarming. Hopefully, the lockdown effect is yet to kick in and we will see a slow down in the coming few days.
-
-          Coupling with the news of both the UK Prime Minister and the Health Secretary has been confirmed to be tested positive, there is an additional risk of the effort of tackling this crisis might get affected. It has been a very bad day!! :(
+        Editor's Analysis (10pm, 27 March):
+          Another bad day for nubmer of fatilities, which put the trend in the UK increasingly closer to Italy, which is a pretty dreadful outlook.
         </div>
 
       <div style={styles.paragraph}>
-          <b>The predicted total cases by the 28th of March is 16866 and over 30,000 cases by the 1st of April and almost doubling in just 5 days.</b>
+          <b>The predicted total cases by the 29th of March is close to 20,000 and which will double to over 40,000 by the 4th of April, i.e. within a week.</b>
       </div>
      <div style={styles.paragraph}>
       <b>
-      The predicted number of fatalities is 958 on the 28th of March and over 2000 by the 1st of April.
+      The predicted number of fatalities is 1176 on the 29th of March (data at 5pm 28th March, but, not published until 29th) and over 4000 by the 5th of April.
         </b>       
       </div>
         <div style={styles.paragraph}>
@@ -77,7 +75,6 @@ const styles = {
           <Tooltip />
           <Legend verticalAlign="top" height={36}/>
           <Line name="Total Cases in Italy" type="monotone" dataKey="it" stroke="#008c45" yAxisId={0} />
-          <Line name="Total Cases in Netherland" type="monotone" dataKey="nl" stroke="#aaaaaa" yAxisId={0} />
           <Line name="Total Cases in the UK" type="monotone" dataKey="uk" stroke="#00247d" yAxisId={0} />
           <Line name="Predicted Total Cases in the UK" type="monotone" dataKey="uk_predict" stroke="#cf142b" yAxisId={0} />
         </LineChart>
@@ -100,7 +97,6 @@ const styles = {
           <Tooltip />
           <Legend verticalAlign="top" height={36}/>
           <Line name="Fatality in Italy" type="monotone" dataKey="it" stroke="#008c45" yAxisId={0} />
-          <Line name="Fatality in Netherland" type="monotone" dataKey="nl" stroke="#aaaaaa" yAxisId={0} />
           <Line name="Fatality in the UK" type="monotone" dataKey="uk" stroke="#00247d" yAxisId={0} />
           <Line name="Predicted Fatality in the UK" type="monotone" dataKey="uk_predict" stroke="#cf142b" yAxisId={0} />
         </LineChart>
