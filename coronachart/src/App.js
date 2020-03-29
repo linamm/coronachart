@@ -21,7 +21,8 @@ const styles = {
     marginHorizontal: 40,
     alignContent: 'flex-start',
     display:'flex',
-    marginTop: 20
+    marginTop: 20,
+    flexDirection: 'column'
   },
   app: {
     display:'flex',
@@ -42,14 +43,14 @@ const styles = {
 
       <div style={styles.paragraph}>
       Editor's Analysis (3:30pm, 29 March):
-         The prediction of total cases is very accurate for today. This more or less proves that the prediction model is quite reliable.
-         The predicted number of death is slight under estimated again, which puts UK on a worse trajectory that that has seen in Italy, which is supper worrying.
-         Like many has already stated in the media, the editor of this website believes that the game changer now is indeed 'Test, Test, Test'. Trace testing, suvillience testing, sampling testing. Improving testing capability along with exploiding all sort of testing strategy should be acted on immediately.
+         <div> The prediction of total cases is very accurate for today. This more or less proves that the prediction model is quite reliable.</div>
+         <div> The predicted fatality is slight under estimated again, which puts UK on a worse trajectory than that has been seen in Italy. This is supper worrying. </div>
+         <div> Like many has already stated in the media, the editor of this website believes that the game changer now is indeed 'Test, Test, Test'. Trace testing, suvillience testing, sampling testing. Improving testing capability along with exploiding all sort of testing strategy should be acted on immediately. </div>
 
       </div>
 
       <div style={styles.paragraph}>
-          <b>The predicted total cases by the 30th of March is arround to 22,000 and  will be almost 40,000 by the 4th of April, i.e. in less than a week.</b>
+          <b>The predicted total cases by the 30th of March is arround to 22,000 and will be almost 40,000 by the 4th of April, i.e. in less than a week.</b>
       </div>
      <div style={styles.paragraph}>
       <b>
@@ -107,9 +108,14 @@ const styles = {
         </LineChart>
         </div>
         <div style={styles.paragraph}>
-     Desclaimer: The prediction here is entirely speculative and subject to change anytime. This site or author doesn't take any form of responsibility of getting the predictions wrong.
+     <div> Desclaimer: The prediction here is entirely speculative and subject to change anytime. This site or author doesn't take any form of responsibility of getting the predictions wrong.</div> 
+     <div> References: </div>
+     <div> 1. https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public </div>
+     <div> 2. https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_the_United_Kingdom </div>
+     <div> 3. https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Italy </div>
+     <div> 4. https://www.worldometers.info/coronavirus/ </div>
+     <div> 5. https://coronavirus.jhu.edu/map.html </div>
 </div>
-
     </div>
 
 
