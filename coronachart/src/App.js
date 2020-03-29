@@ -41,8 +41,8 @@ const styles = {
       </div>
 
       <div style={styles.paragraph}>
-        Editor's Analysis (11pm, 27 March):
-          Another bad day for nubmer of fatilities, which put the trend in the UK increasingly closer to Italy. That is a pretty dreadful outlook.
+        Editor's Analysis (11:50pm, 27 March):
+          Another bad day for the nubmer of fatilities, which put the trend in the UK increasingly closer to Italy. That is a pretty dreadful outlook.
           Data from China is added for comparison. China went to lock down on the 23rd of Jan when there is only arround 800 cases, the total cases start to show a slowing down trend from arround 20 days after the lock down. The official UK lock down is on the 23rd of March, when there is already over 6000 cases. Although, UK has announced social distancing and closing of pubs a few days before that. The shielding of 1.2 million vounerable people is also a unique approach in comparison with other countries. If UK follows a similar pattern like have seen in China, we will start to see a slow down of new cases arround mid April. Fatality rate will start to slow down about 10 days after that.
           The UK lock down happened at a much later stage than that of China, but, slightly earlier than Italy. An earlier lockdown in China and Korean has been proved to achieve lower fatality rate. The effect of the UK approach is yet to be seen.
         </div>
