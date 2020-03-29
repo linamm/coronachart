@@ -41,18 +41,19 @@ const styles = {
       </div>
 
       <div style={styles.paragraph}>
-        Editor's Analysis (11:50pm, 27 March):
-          Another bad day for the nubmer of fatilities, which put the trend in the UK increasingly closer to Italy. That is a pretty dreadful outlook.
-          Data from China is added for comparison. China went to lock down on the 23rd of Jan when there is only arround 800 cases, the total cases start to show a slowing down trend from arround 20 days after the lock down. The official UK lock down is on the 23rd of March, when there is already over 6000 cases. Although, UK has announced social distancing and closing of pubs a few days before that. The shielding of 1.2 million vounerable people is also a unique approach in comparison with other countries. If UK follows a similar pattern like have seen in China, we will start to see a slow down of new cases arround mid April. Fatality rate will start to slow down about 10 days after that.
-          The UK lock down happened at a much later stage than that of China, but, slightly earlier than Italy. An earlier lockdown in China and Korean has been proved to achieve lower fatality rate. The effect of the UK approach is yet to be seen.
-        </div>
+      Editor's Analysis (3:30pm, 29 March):
+         The prediction of total cases is very accurate for today. This more or less proves that the prediction model is quite reliable.
+         The predicted number of death is slight under estimated again, which puts UK on a worse trajectory that that has seen in Italy, which is supper worrying.
+         Like many has already stated in the media, the editor of this website believes that the game changer now is indeed 'Test, Test, Test'. Trace testing, suvillience testing, sampling testing. Improving testing capability along with exploiding all sort of testing strategy should be acted on immediately.
+
+      </div>
 
       <div style={styles.paragraph}>
-          <b>The predicted total cases by the 29th of March is close to 20,000 and which will double to over 40,000 by the 4th of April, i.e. within a week.</b>
+          <b>The predicted total cases by the 30th of March is arround to 22,000 and  will be almost 40,000 by the 4th of April, i.e. in less than a week.</b>
       </div>
      <div style={styles.paragraph}>
       <b>
-      The predicted number of fatalities is 1176 on the 29th of March (data at 5pm 28th March, but, not published until 29th) and over 4000 by the 5th of April.
+      The predicted number of fatalities is 1569 on the 30th of March (actual data at 5pm 29th March, but, not published until 30th) and almost 4000 by the 4th of April.
         </b>       
       </div>
         <div style={styles.paragraph}>
