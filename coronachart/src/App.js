@@ -56,21 +56,14 @@ function App() {
           The prediction of total cases is very accurate for today again.
         </div>
         <div>
-          The actual number of fatalities is much less than predicted. Hope this is not noise, but a trend to stay.
-        </div>
-        <div>
-          Like many has already stated in the media, the editor of this website
-          believes that the game changer now is indeed 'Test, Test, Test'. Trace
-          testing, suvillience testing, sampling testing. Improving testing
-          capability along with exploiding all sort of testing strategy should
-          be acted on immediately.{" "}
+          The actual number of fatalities is much less than predicted. Hope this is not noise, but a trend to stay. If this is a trend, it will mean that NHS's ability of managing severe cases is improving.
         </div>
       </div>
 
       <div style={styles.paragraph}>
         <b>
           The predicted total cases by the 31th of March is arround to 25,297
-          and will be almost double to 50,000 by the 7th of April, i.e. in a weeks time.
+          and will be almost double to 50,000 by the 7th of April, i.e. with in a week.
         </b>
       </div>
       <div style={styles.paragraph}>
@@ -80,20 +73,7 @@ function App() {
           over 3000 by 5th of April.
         </b>
       </div>
-      <div style={styles.paragraph}>
-        The starting point of the first graph is the day when Italy has 150
-        cases (2020-02-23), while the UK has 160 cases (2020-03-06). At that
-        point, UK is 12 days behind Italy.
-      </div>
-      <div style={styles.paragraph}>
-        In the early days, the UK curve is quite closely following the Italy
-        one, therefore a simplified model to predict the uk numbers is to track
-        the daily growth rate of cases in Italy. However, the UK seems to be
-        doing much better later on, this might be a result of the social
-        distancing measures are working. Therefore, the prediction model takes
-        into account of a previous predition error.{" "}
-      </div>
-
+      
       <div style={styles.graph}>
         <LineChart
           width={1000}
@@ -137,6 +117,21 @@ function App() {
           />
         </LineChart>
       </div>
+
+      <div style={styles.paragraph}>
+        The starting point of the first graph is the day when Italy has 150
+        cases (2020-02-23), while the UK has 160 cases (2020-03-06). At that
+        point, UK is 12 days behind Italy.
+      </div>
+      <div style={styles.paragraph}>
+        In the early days, the UK curve is quite closely following the Italy
+        one, therefore a simplified model to predict the uk numbers is to track
+        the daily growth rate of cases in Italy. However, the UK seems to be
+        doing much better later on, this might be a result of the social
+        distancing measures are working. Therefore, the prediction model takes
+        into account of a previous predition error.{" "}
+      </div>
+
 
       <div style={styles.paragraph}>
         Graph below shows the prediction of fatality cases using the same
@@ -186,10 +181,6 @@ function App() {
         </LineChart>
       </div>
 
-      <div>
-        Bar chart for number of new cases
-
-      </div>
       <div style={styles.paragraph}>
         <div>
           Desclaimer: The prediction here is entirely speculative and subject to
