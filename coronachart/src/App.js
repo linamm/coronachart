@@ -51,25 +51,24 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Editor's Analysis (5:30pm, 31 March):
+        Editor's Analysis (5:00pm, 1 April):
         <div>
-          The prediction of total cases is very accurate for three days in a row. The growth rate of new cases is consistent and slightly slowing down, definitely not accelerating, which is a very good sign at this stage and a sign of social distancing measures are working.
-        </div>
+          The growth rate of new cases has slight increased yesterday, hopefully, this is just a normal fluctuation.
+          </div>
         <div>
-          The actual number of fatalities is higher than predicted. This seems to be totally opposite of yesterday. So, the trend of fatalities is catching up to the trend of Italy again. There seems not to be a definitive trend here yet. However, it is expected to see a lagging of 10 days between the trend of new cases and fatalities, so, we should see some improvement in the coming week, giving that NHS doesn't hit it's capacity.
+          The actual number of fatalities is higher than predicted two days in a row, which put the UK onto a worse trajectory than that has seen in Italy.
         </div>
       </div>
 
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 1st of April is 28,338
-          and will be almost 50,000 by the 8th of April.
+          The predicted total cases by the 2nd of April is 33,694.
+          and will be over 50,000 by the 7th of April.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities is 2117 on the 1st of April
-          and double to over 4000 by 5th of April.
+          The predicted number of fatalities is 2924 on the 2nd of April, over 5000 by 5th April and over 10,000 by 10th of April.
         </b>
       </div>
       

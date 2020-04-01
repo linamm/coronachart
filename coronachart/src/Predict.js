@@ -40,7 +40,7 @@ const getSingleAdjucstFactor = (cases, index) => {
   return factor;
 };
 
-//Predict the cases
+//Predict the cases:
 export const getPredictCases = (cases, point_latest) => {
   let temp = cases;
   const adjustFactor = getAdjustFactor(cases, point_latest);
@@ -60,6 +60,17 @@ export const getPredictCases = (cases, point_latest) => {
       temp[i].uk_predict = uk_predict;
     }
   }
-  console.log(JSON.stringify(temp));
   return temp;
 };
+
+//Generate new cases:
+export const getNewCasesForKey = (cases, key) => {
+  var newEntries = [];
+  for(let i = 1; i < cases.length; i++) {
+    const entry = {[key]: (cases[i][key] - cases[i-1][key]), name: cases[i].name};
+    console.log('entry: ' + JSON.stringify(entry));
+    newEntries.push(entry);
+  }
+  return newEntries;
+};
+
