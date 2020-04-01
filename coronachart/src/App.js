@@ -53,7 +53,7 @@ function App() {
       <div style={styles.paragraph}>
         Editor's Analysis (5:00pm, 1 April):
         <div>
-          The growth rate of new cases has slight increased yesterday, hopefully, this is just a normal fluctuation.
+          The growth rate of new cases has slight increased yesterday, hopefully, this is just fluctuation.
           </div>
         <div>
           The actual number of fatalities is higher than predicted two days in a row, which put the UK onto a worse trajectory than that has seen in Italy.
@@ -62,8 +62,7 @@ function App() {
 
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 2nd of April is 33,694.
-          and will be over 50,000 by the 7th of April.
+          The predicted total cases by the 2nd of April is 33,694 and will be over 50,000 by the 7th of April.
         </b>
       </div>
       <div style={styles.paragraph}>
