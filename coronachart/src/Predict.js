@@ -75,7 +75,6 @@ export const getNewCases = (cases, keys, compares) => {
           (cases[i][keys[j]] - cases[i-1][keys[j]]) :
             (cases[i][keys[j]] - cases[i-1][compares[j]]);
     }
-    console.log('entry: ' + JSON.stringify(entry));
     newEntries.push(entry);
   }
   return newEntries;

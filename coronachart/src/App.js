@@ -68,7 +68,7 @@ function App() {
       <div style={styles.paragraph}>
         Editor's Analysis (8:00pm, 2 April):
         <div>
-          The predicted total cases and fatalities are both very close to the published data today, which indicates a stablising trend and no major factor has changed. Bar chart of new daily for total cases and fatalities cases are added. This helps to see the trend more clearly. What we can see clearly from the bar chart is that, the increase in daily new cases is similar or even smaller than it has been and hopefully will be decreasing soon. The new fatalities is still increasing, but, the rate of increasing is slowing down.
+          The predicted total cases and fatalities are both very close to the published data today, which indicates a stablising trend and no major factor has changed. Bar chart of new daily for total cases and fatality cases are added. This helps to see the trend more clearly. The increase in daily new cases is similar or even smaller than it has been and hopefully will be decreasing soon. The new fatalities is still increasing, but, the rate of increasing is slowing down.
         </div>
       </div>
 
