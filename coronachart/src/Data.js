@@ -23,7 +23,7 @@ import { getPredictCases, getNewCases } from './Predict.js';
   {"name": "30", "it": 1809, "cn": 811, 'uk': 1408, 'uk_predict': 1569},
   {"name": "31", "it": 2158, "cn": 908, 'uk': 1789, 'uk_predict': 1628},
   {"name": "1", "it": 2503, "cn": 1016, 'uk': 2352, 'uk_predict': 2117},
-  {"name": "2", "it": 2978, "cn": 1113},
+  {"name": "2", "it": 2978, "cn": 1113, 'uk': 2921, 'uk_predict': 2924},
   {"name": "3", "it": 3405, "cn": 1259},
   {"name": "4", "it": 4032, "cn": 1380},
   {"name": "5", "it": 4825, "cn": 1520},
@@ -33,10 +33,10 @@ import { getPredictCases, getNewCases } from './Predict.js';
   {"name": "9", "it": 8215, "cn": 2004},
   {"name": "10", "it": 9134, "cn": 2118},
   {"name": "11", "it": 10023, "cn": 2345},
-  {"name": "12", "cn": 2442},
-  {"name": "13", "cn": 2592},
-  {"name": "14", "cn": 2663},
-  {"name": "15", "cn": 2715},
+  {"name": "12", "it": 10779, "cn": 2442},
+  {"name": "13", "it": 11591, "cn": 2592},
+  {"name": "14", "it": 12428, "cn": 2663},
+  {"name": "15", "it": 13155, "cn": 2715},
 ];
 
 const raw_total_cases = [
@@ -61,26 +61,26 @@ const raw_total_cases = [
   {"name": "24", "it": 15113,'uk': 8077, 'uk_predict': 8407, "nl": 5560, "cn": 28108},
   {"name": "25", "it": 17660, 'uk': 9529, 'uk_predict': 9021, "nl": 6412, "cn": 31161},
   {"name": "26", "it": 21157, 'uk': 11568, 'uk_predict': 11402, "nl": 7431, "cn": 34546},
-  {"name": "27","it": 24747,'uk': 14578, 'uk_predict': 13468, "nl": 8603, "cn": 37198},
-  {"name": "28","it": 27980,'uk': 17089, 'uk_predict': 16866, "cn": 40171},
-  {"name": "29","it": 31506,"cn": 42638, 'uk': 19522, 'uk_predict': 19524},
-  {"name": "30","it": 35713, "cn": 58761, 'uk': 22141, 'uk_predict': 22071},
-  {"name": "31","it": 41035, "cn": 63851, 'uk': 25150, 'uk_predict': 25297},
-  {"name": "1","it": 47021, "cn": 66492,'uk': 29474, 'uk_predict': 28338},
-  {"name": "2","it": 53578, "cn": 68500},
-  {"name": "3","it": 59138, "cn": 70548},
-  {"name": "4","it": 63927, "cn": 72436},
-  {"name": "5","it": 69176, "cn": 74185},
-  {"name": "6","it": 74386, "cn": 75465},
-  {"name": "7","it": 80589, "cn": 76288},
-  {"name": "8","it": 86498, "cn": 76936},
-  {"name": "9", "cn": 76936},
-  {"name": "10","cn": 77150},
-  {"name": "11","cn": 77658},
-  {"name": "12","cn": 78064},
-  {"name": "13","cn": 78497},
-  {"name": "14","cn": 78824},
-  {"name": "15","cn": 79251},
+  {"name": "27", "it": 24747,'uk': 14578, 'uk_predict': 13468, "nl": 8603, "cn": 37198},
+  {"name": "28", "it": 27980,'uk': 17089, 'uk_predict': 16866, "cn": 40171},
+  {"name": "29", "it": 31506,"cn": 42638, 'uk': 19522, 'uk_predict': 19524},
+  {"name": "30", "it": 35713, "cn": 58761, 'uk': 22141, 'uk_predict': 22071},
+  {"name": "31", "it": 41035, "cn": 63851, 'uk': 25150, 'uk_predict': 25297},
+  {"name": "1", "it": 47021, "cn": 66492,'uk': 29474, 'uk_predict': 28338},
+  {"name": "2", "it": 53578, "cn": 68500, 'uk': 33718, 'uk_predict': 33694},
+  {"name": "3", "it": 59138, "cn": 70548},
+  {"name": "4", "it": 63927, "cn": 72436},
+  {"name": "5", "it": 69176, "cn": 74185},
+  {"name": "6", "it": 74386, "cn": 75465},
+  {"name": "7", "it": 80589, "cn": 76288},
+  {"name": "8", "it": 86498, "cn": 76936},
+  {"name": "9", "it": 92472, "cn": 76936},
+  {"name": "10", "it": 97689, "cn": 77150},
+  {"name": "11", "it": 101739, "cn": 77658},
+  {"name": "12", "it": 105792, "cn": 78064},
+  {"name": "13", "it": 110574, "cn": 78497},
+  {"name": "14", "cn": 78824},
+  {"name": "15", "cn": 79251},
 
 ];
 
@@ -94,10 +94,10 @@ const raw_total_cases = [
 
 export const totalCaseStartDay = 6;
 export const fatalityCaseStartDay = 14;
-export const Today = 31 + 1;
+export const Today = 31 + 2;
 export const totalCases = getPredictCases(raw_total_cases, Today - totalCaseStartDay);
 export const fatalityCases = getPredictCases(raw_death_cases, Today - fatalityCaseStartDay);
 //export const newCasesUK = getNewCasesForKey(raw_total_cases, 'uk');
-//export const newFatalities = getNewCases(raw_death_cases);
+//export const newFatalities = getNewCasesForKey(raw_death_cases, 'it');
 
 
