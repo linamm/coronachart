@@ -51,7 +51,7 @@ function App() {
     uk: "#00247d",
     it: "#008c45",
     china: "#DE2910",
-    uk_predict: "#aaaaaa"
+    uk_predict: "#666666"
   }
 
   const graphSize = {
@@ -169,8 +169,8 @@ function App() {
           <Line
             name="Fatalities in China"
             type="monotone"
-            dataKey={colors.china}
-            stroke="#DE2910"
+            dataKey={"china"}
+            stroke={colors.china}
             yAxisId={0}
           />
           <Line
