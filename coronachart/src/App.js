@@ -8,10 +8,13 @@ import {
   YAxis,
   Tooltip,
   Line,
-  CartesianGrid
+  CartesianGrid,
+  Bar,
+  BarChart
 } from "recharts";
-import { totalCases, fatalityCases } from "./Data.js";
+import { totalCases, fatalityCases, newCases, newFatalityCases } from "./Data.js";
 import ReactGA from "react-ga";
+import { isConditionalExpression } from "@babel/types";
 
 ReactGA.initialize("UA-101607316-3");
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -44,6 +47,18 @@ function App() {
     }
   };
 
+  const colors = {
+    uk: "#00247d",
+    it: "#008c45",
+    china: "#DE2910",
+    uk_predict: "#aaaaaa"
+  }
+
+  const graphSize = {
+    width: 1000,
+    height: 300
+  }
+
   return (
     <div style={styles.app}>
       <div style={styles.headline}>
@@ -70,8 +85,8 @@ function App() {
       
       <div style={styles.graph}>
         <LineChart
-          width={1000}
-          height={300}
+          width={graphSize.width}
+          height={graphSize.height}
           margin={{ top: 5, right: 5, bottom: 5, left: 5 }}
           data={totalCases}
         >
@@ -84,7 +99,7 @@ function App() {
             name="Total Cases in Italy"
             type="monotone"
             dataKey="it"
-            stroke="#008c45"
+            stroke={colors.it}
             yAxisId={0}
           />
 
@@ -92,21 +107,21 @@ function App() {
             name="Total Cases in China"
             type="monotone"
             dataKey="cn"
-            stroke="#DE2910"
+            stroke={colors.china}
             yAxisId={0}
           />
           <Line
             name="Predicted Total Cases in the UK"
             type="monotone"
             dataKey="uk_predict"
-            stroke="#aaaaaa"
+            stroke={colors.uk_predict}
             yAxisId={0}
           />
           <Line
             name="Total Cases in the UK"
             type="monotone"
             dataKey="uk"
-            stroke="#00247d"
+            stroke={colors.uk}
             yAxisId={0}
           />
         </LineChart>
@@ -134,8 +149,8 @@ function App() {
 
       <div style={styles.graph}>
         <LineChart
-          width={1000}
-          height={300}
+          width={graphSize.width}
+          height={graphSize.height}
           margin={{ top: 5, right: 5, bottom: 5, left: 5 }}
           data={fatalityCases}
         >
@@ -148,13 +163,13 @@ function App() {
             name="Fatalities in Italy"
             type="monotone"
             dataKey="it"
-            stroke="#008c45"
+            stroke={colors.it}
             yAxisId={0}
           />
           <Line
             name="Fatalities in China"
             type="monotone"
-            dataKey="cn"
+            dataKey={colors.china}
             stroke="#DE2910"
             yAxisId={0}
           />
@@ -162,17 +177,57 @@ function App() {
             name="Predicted Fatality in the UK"
             type="monotone"
             dataKey="uk_predict"
-            stroke="#aaaaaa"
+            stroke={colors.uk_predict}
             yAxisId={0}
           />
           <Line
             name="Fatalities in the UK"
             type="monotone"
             dataKey="uk"
-            stroke="#00247d"
+            stroke={colors.uk}
             yAxisId={0}
           />
         </LineChart>
+      </div>
+
+      <div style={styles.graph}>
+          <BarChart
+            width={graphSize.width}
+            height={graphSize.height}
+            data={newCases}
+            margin={{
+              top: 5, right: 30, left: 20, bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="uk" fill={colors.uk} name='New Cases UK'/>
+            <Bar dataKey="uk_predict" fill={colors.uk_predict} name='New Cases UK Predict' />
+          </BarChart>
+
+      </div>
+
+      <div style={styles.graph}>
+          <BarChart
+            width={graphSize.width}
+            height={graphSize.height}
+            data={newFatalityCases}
+            margin={{
+              top: 5, right: 30, left: 20, bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="uk" fill={colors.uk} name='New Fatality Cases UK'/>
+            <Bar dataKey="uk_predict" fill={colors.uk_predict} name='New Fatality Cases UK Predict' />
+          </BarChart>
+
       </div>
 
       <div style={styles.paragraph}>

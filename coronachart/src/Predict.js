@@ -64,10 +64,17 @@ export const getPredictCases = (cases, point_latest) => {
 };
 
 //Generate new cases:
-export const getNewCasesForKey = (cases, key) => {
+export const getNewCases = (cases, keys, compares) => {
   var newEntries = [];
   for(let i = 1; i < cases.length; i++) {
-    const entry = {[key]: (cases[i][key] - cases[i-1][key]), name: cases[i].name};
+    const entry = {};
+    entry.name = cases[i].name;
+    for (let j = 0; j < keys.length; j++) {
+      entry[keys[j]] =
+        (cases[i-1][compares[j]] == undefined ) ?
+          (cases[i][keys[j]] - cases[i-1][keys[j]]) :
+            (cases[i][keys[j]] - cases[i-1][compares[j]]);
+    }
     console.log('entry: ' + JSON.stringify(entry));
     newEntries.push(entry);
   }

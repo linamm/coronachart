@@ -84,20 +84,14 @@ const raw_total_cases = [
 
 ];
 
-// const getNewCases() = {
-//   const ukCases = getNewCasesForKey(raw_total_cases, 'uk');
-//   const itCases = getNewCasesForKey(raw_total_cases, 'it');
-
-//   for (i)
-
-// }
-
 export const totalCaseStartDay = 6;
 export const fatalityCaseStartDay = 14;
 export const Today = 31 + 2;
-export const totalCases = getPredictCases(raw_total_cases, Today - totalCaseStartDay);
-export const fatalityCases = getPredictCases(raw_death_cases, Today - fatalityCaseStartDay);
-//export const newCasesUK = getNewCasesForKey(raw_total_cases, 'uk');
-//export const newFatalities = getNewCasesForKey(raw_death_cases, 'it');
+export const TodayTotalIndex = Today - totalCaseStartDay;
+export const TodayFatalityIndex = Today - fatalityCaseStartDay;
+export const totalCases = getPredictCases(raw_total_cases, TodayTotalIndex);
+export const fatalityCases = getPredictCases(raw_death_cases, TodayFatalityIndex);
+export const newCases = getNewCases(totalCases, ['uk', 'uk_predict'], ['uk', 'uk']).slice(TodayTotalIndex - 12, TodayTotalIndex + 7 ); // Past 15 days and Future 7 days
+export const newFatalityCases = getNewCases(fatalityCases, ['uk', 'uk_predict'], ['uk', 'uk']).slice(TodayFatalityIndex - 12, TodayFatalityIndex + 7 ); // Past 10 days and Future 7 days
 
 
