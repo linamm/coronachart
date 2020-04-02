@@ -64,7 +64,7 @@ function App() {
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 3rd of April will be 3364, over 5000 by 6th April and over 10,000 by 11th of April.
+          The predicted number of fatalities published on the 3rd of April will be 3364, which overtakes 3318 reported in China to date. The predicted number will be over 5000 by 6th April and over 10,000 by 11th of April.
         </b>
       </div>
       
