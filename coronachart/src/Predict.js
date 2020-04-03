@@ -4,21 +4,6 @@ const getAdjustFactor = (cases, point_latest) => {
   // When unsure, give 0.5.
   const weight = 0.5;
   const remainingWeight = 1 - weight;
-  // const recessPoints = 4;
-  // const totalFactor = 0;
-
-  // //TODO: refactor this into a better algorithm
-  // for (var i=0; i < recessPoints; i++) {
-  //   const factor = getSingleAdjucstFactor(cases, point_latest - i);
-  //   if (i = 0) {
-  //     totalFactor = totalFactor + factor * weight;
-  //     break;
-  //   }
-  //   for (var j=0; j < i ; j++) {
-  //     factor = factor * remainingWeight
-  //   }
-
-  // }
 
   const adjustFactorOne = getSingleAdjucstFactor(cases, point_latest);
   const adjustFactorTwo = getSingleAdjucstFactor(cases, point_latest - 1);
@@ -51,7 +36,6 @@ export const getPredictCases = (cases, point_latest) => {
     } else if (i == point_latest) {
     } else {
       const ratio_new_cases = (temp[i].it - temp[i - 1].it) / temp[i].it;
-      console.log("ratio_new_cases: " + ratio_new_cases);
       const previous_uk =
         i > point_latest + 1 ? temp[i - 1].uk_predict : temp[i - 1].uk;
       const uk_predict = Math.ceil(
@@ -63,7 +47,7 @@ export const getPredictCases = (cases, point_latest) => {
   return temp;
 };
 
-//Generate new cases:
+// Generate new cases:
 export const getNewCases = (cases, keys, compares) => {
   var newEntries = [];
   for(let i = 1; i < cases.length; i++) {
@@ -79,4 +63,26 @@ export const getNewCases = (cases, keys, compares) => {
   }
   return newEntries;
 };
+
+//Generate fatality rate. 
+/**
+ * Make sure to pass same size matching array. 
+ * keys, list of countries of interest
+ */
+
+export const getFatalityRates = (fatalityCases, totalCases, keys) => {
+  if (fatalityCases.length != totalCases.length) return [];
+  console.log("length is" + fatalityCases.length);
+  var rates = [];
+  for(let i = 1; i < fatalityCases.length; i++) {
+    const entry = {};
+    entry.name = fatalityCases[i].name;
+    for (let j = 0; j < keys.length; j++) {
+      entry[keys[j]] = fatalityCases[i][keys[j]]/totalCases[i][keys[j]];
+    }
+    rates.push(entry);
+  }
+  return rates;
+}
+
 

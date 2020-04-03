@@ -12,7 +12,7 @@ import {
   Bar,
   BarChart
 } from "recharts";
-import { totalCases, fatalityCases, newCases, newFatalityCases } from "./Data.js";
+import { totalCases, fatalityCases, newCases, newFatalityCases, fatalityRates } from "./Data.js";
 import ReactGA from "react-ga";
 import { isConditionalExpression } from "@babel/types";
 
@@ -56,7 +56,7 @@ function App() {
 
   const graphSize = {
     width: 1000,
-    height: 300
+    height: 500
   }
 
   return (
@@ -206,6 +206,8 @@ function App() {
             <Legend />
             <Bar dataKey="uk" fill={colors.uk} name='New Cases UK'/>
             <Bar dataKey="uk_predict" fill={colors.uk_predict} name='New Cases UK Predict' />
+            {/* <Bar dataKey="it" fill={colors.it} name='New Cases Italy Predict' /> */}
+
           </BarChart>
 
       </div>
@@ -228,6 +230,49 @@ function App() {
             <Bar dataKey="uk_predict" fill={colors.uk_predict} name='New Fatalities UK Predict' />
           </BarChart>
 
+      </div>
+
+      <div style={styles.graph}>
+        <LineChart
+          width={graphSize.width}
+          height={graphSize.height}
+          margin={{ top: 5, right: 5, bottom: 5, left: 5 }}
+          data={fatalityRates}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis dataKey="it" />
+          <Tooltip />
+          <Legend verticalAlign="top" height={36} />
+          <Line
+            name="Fatality rate in China"
+            type="monotone"
+            dataKey="cn"
+            stroke={colors.china}
+            yAxisId={0}
+          />
+          <Line
+            name="Fatality rate in Italy"
+            type="monotone"
+            dataKey="it"
+            stroke={colors.it}
+            yAxisId={0}
+          />
+          <Line
+            name="Predicted Fatality rate in the UK"
+            type="monotone"
+            dataKey="uk_predict"
+            stroke={colors.uk_predict}
+            yAxisId={0}
+          />
+          <Line
+            name="Fatality rate in the UK"
+            type="monotone"
+            dataKey="uk"
+            stroke={colors.uk}
+            yAxisId={0}
+          />
+        </LineChart>
       </div>
 
       <div style={styles.paragraph}>
