@@ -16,7 +16,5 @@ By comparison, it can highlight the issues, wether it is under testing or capabi
 
 ### Theory
 
-The author is frustrated that some decisions seem to be based on pure theoratical modelling, insteading of doing what is obviously in front of our eyes, i.e. just looking what has just happened in other countries and what we can learn from them.
-
-It is a new virus, any modelling would be speculative to some degree. Social behavior modelling could also be full of assumptions. Isn't the best model is right in front of us, i.e. history... real events played out in real countries?
+It is a new virus, any modelling would be speculative to some degree. Social behavior modelling could also be full of assumptions. The best model could be just right in front of us, i.e. history... real events played out in real countries.
 
