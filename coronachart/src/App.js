@@ -172,7 +172,7 @@ function App() {
           <Line
             name="Fatalities in China"
             type="monotone"
-            dataKey={"china"}
+            dataKey={"cn"}
             stroke={colors.china}
             yAxisId={0}
           />
