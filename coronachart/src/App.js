@@ -66,20 +66,23 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Editor's Analysis (8:00pm, 2 April):
+        Editor's Analysis (3:30pm, 3 April):
         <div>
-          The predicted total cases and fatalities are both very close to the published data today, which indicates a stablising trend and no major factor has changed. Bar chart of new daily for total cases and fatality cases are added. This helps to see the trend more clearly. The increase in daily new cases is similar or even smaller than it has been and hopefully will be decreasing soon. The new fatalities is still increasing, but, the rate of increasing is slowing down.
+          The predicted slow down for 3rd of April on new cases and new fatalities is largely based on what we have seen in Italy. However, based on today's data, UK's new cases has not yet started to slow down at this stage, rather, it is still on an increasing trend. This could be an indication of the UK's lockdown measures are not as effective as that of Italy. The total number of fatalities has already passed China by quite a bit.
+        </div>
+        <div>
+          Fatality rate graph is added for comparison between different countries at the same stage. The fatality rate in the UK on 3rd of April is 9%. This is a stark contrast of the estimated fatality rate of 0.7% the government has mentioned 2 weeks ago. This is either an indication of NHS is not coping effectively or the testing is completely insufficient, which means there are 10 times more infected cases going around untested.
         </div>
       </div>
 
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 3rd of April is 37,172 and will be over 50,000 by the 7th of April.
+          The predicted total cases by the 4th of April is 41,555 and will be over 50,000 by the 7th of April.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 3rd of April will be 3364, which overtakes 3318 reported in China to date. The predicted number will be over 5000 by 6th April and over 10,000 by 11th of April.
+          The predicted number of fatalities published on the 4th of April will be 4419 and over 5000 by as early as 5th of April.
         </b>
       </div>
       
