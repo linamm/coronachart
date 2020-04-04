@@ -78,7 +78,7 @@ export const getFatalityRates = (fatalityCases, totalCases, keys) => {
     const entry = {};
     entry.name = fatalityCases[i].name;
     for (let j = 0; j < keys.length; j++) {
-      entry[keys[j]] = fatalityCases[i][keys[j]]/totalCases[i][keys[j]];
+      entry[keys[j]] = (fatalityCases[i][keys[j]]/totalCases[i][keys[j]]).toFixed(3);
     }
     rates.push(entry);
   }

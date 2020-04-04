@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import {
-  Label,
   Legend,
   LineChart,
   XAxis,
@@ -14,12 +13,35 @@ import {
 } from "recharts";
 import { totalCases, fatalityCases, newCases, newFatalityCases, fatalityRates } from "./Data.js";
 import ReactGA from "react-ga";
-import { isConditionalExpression } from "@babel/types";
 
 ReactGA.initialize("UA-101607316-3");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
+
 function App() {
+
+  const [dimensions, setDimensions] = React.useState({ 
+    height: window.innerHeight,
+    width: window.innerWidth
+  });
+  
+  React.useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      });
+    };
+    
+
+    window.addEventListener('resize', handleResize);
+
+    return _ => {
+      window.removeEventListener('resize', handleResize);
+    }
+    
+  });
+  
   const styles = {
     headline: {
       marginHorizontal: 40,
@@ -32,6 +54,7 @@ function App() {
       marginHorizontal: 40,
       alignContent: "flex-start",
       display: "flex",
+      flex: 1,
       marginTop: 20,
       flexDirection: "column"
     },
@@ -39,7 +62,7 @@ function App() {
       display: "flex",
       flexDirection: "column",
       margin: 50,
-      paddingBottom: 50
+      paddingBottom: 50,
     },
     graph: {
       margin: 20,
@@ -55,8 +78,10 @@ function App() {
   }
 
   const graphSize = {
+    // width: dimensions.width * 0.8,
+    // height: dimensions.width * 0.6
     width: 1000,
-    height: 500
+    height: 300
   }
 
   return (
@@ -66,23 +91,24 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Editor's Analysis (3:30pm, 3 April):
-        <div>
-          The predicted slow down for 3rd of April on new cases and new fatalities is largely based on what we have seen in Italy. However, based on today's data, UK's new cases has not yet started to slow down at this stage, rather, it is still on an increasing trend. This could be an indication of the UK's lockdown measures are not as effective as that of Italy. The total number of fatalities has already passed China by quite a bit.
+        Editor's Analysis (4:00pm, 4 April):
         </div>
-        <div>
-          Fatality rate graph is added for comparison between different countries at the same stage. The fatality rate in the UK on 3rd of April is 9%. This is a stark contrast of the estimated fatality rate of 0.7% the government has mentioned 2 weeks ago. This is either an indication of NHS is not coping effectively or the testing is completely insufficient, which means there are 10 times more infected cases going around untested.
+        <div style={styles.paragraph}>
+          Fatality rate is now over 10%. This might be a combination of the continued under testing and non-effective management of sevever cases. The fatality rate at this stage is normally underestimated because of the increasing rate of new cases.
         </div>
-      </div>
 
+        <div style={styles.paragraph}>
+          It is difficult to explain why the fatality rate in the UK is 5 times of China and almost double that of Italy at similar stage of the virus spreading. However, one thing is obvious, it highlights the deadlyness of the COVID-19 and any mention of this is similar to the common flu is obviously wrong and cannot stand ground with this data available to us. In the editor's opinion, herd immunity would be catastrophic for society and economy. The impact of quarantine to economy will be severe, but short term, economy will bounce back very quickly. With herd immunity, economy will face long term decline for a decade and traumatic to millions of families.
+        </div>
+  
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 4th of April is 41,555 and will be over 50,000 by the 7th of April.
+          The predicted total cases by the 5th of April is over 45,000 and nearly 80,000 by the 14th of April.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 4th of April will be 4419 and over 5000 by as early as 5th of April.
+          The predicted number of fatalities published on the 5th of April will be over 5000 and over 10,000 within a week.
         </b>
       </div>
       
@@ -242,7 +268,7 @@ function App() {
           margin={{ top: 5, right: 5, bottom: 5, left: 5 }}
           data={fatalityRates}
         >
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid strokeDasharray="3 4" />
           <XAxis dataKey="name" />
           <YAxis dataKey="it" />
           <Tooltip />
