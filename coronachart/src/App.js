@@ -98,7 +98,7 @@ function App() {
         </div>
 
         <div style={styles.paragraph}>
-          It is difficult to explain why the fatality rate in the UK is 5 times of China and almost double that of Italy at similar stage of the virus spreading. However, one thing is obvious, it highlights the deadlyness of the COVID-19 and any mention of this is similar to the common flu is obviously wrong and cannot stand ground with this data available to us. In the editor's opinion, herd immunity would be catastrophic for society and economy. The impact of quarantine to economy will be severe, but short term, economy will bounce back very quickly. With herd immunity, economy will face long term decline for a decade and traumatic to millions of families.
+          It is difficult to explain why the fatality rate in the UK is 5 times of China and almost double that of Italy at similar stage of the virus spreading. However, one thing is obvious, it highlights the deadliness of the COVID-19 and comparison of this to the common flu is obviously misleading and cannot stand ground with this data available to us. In the editor's opinion, herd immunity would be catastrophic for society and economy. The impact of quarantine to economy will be severe, but short term, economy will bounce back very quickly. With herd immunity, economy will face long term decline for a decade and traumatic to millions of families.
         </div>
   
       <div style={styles.paragraph}>
