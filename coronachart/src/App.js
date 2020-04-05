@@ -91,24 +91,20 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Editor's Analysis (4:00pm, 4 April):
+        Editor's Analysis (2:40pm, 5 April):
         </div>
         <div style={styles.paragraph}>
-          Fatality rate is now over 10%. This might be a combination of the continued under testing and non-effective management of sevever cases. The fatality rate at this stage is normally underestimated because of the increasing rate of new cases.
-        </div>
-
-        <div style={styles.paragraph}>
-          It is difficult to explain why the fatality rate in the UK is 5 times of China and almost double that of Italy at similar stage of the virus spreading. However, one thing is obvious, it highlights the deadliness of the COVID-19 and comparison of this to the common flu is obviously misleading and cannot stand ground with this data available to us. In the editor's opinion, herd immunity would be catastrophic for society and economy. The impact of quarantine to economy will be severe, but short term, economy will bounce back very quickly. With herd immunity, economy will face long term decline for a decade and traumatic to millions of families.
+          The actual fatality rate maintained at 10.3%. This could be either a sign that the testing coverage is increasing or cases are having a better outcome. Either way it is a good direction at this stage. The number of new cases are  higher than predicted, this might be down to better testing capability, rather than an actual worse trend.
         </div>
   
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 5th of April is over 45,000 and nearly 80,000 by the 14th of April.
+          The predicted total cases by the 6th of April is 52,349 and nearly 80,000 by the 12th of April.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 5th of April will be over 5000 and over 10,000 within a week.
+          The predicted number of fatalities published on the 6th of April is arround 5500 and over 10,000 within a week, by the 13th April.
         </b>
       </div>
       
