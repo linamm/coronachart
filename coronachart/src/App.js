@@ -91,20 +91,20 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Editor's Analysis (2:40pm, 5 April):
+        Editor's Analysis (5:45pm, 6 April):
         </div>
         <div style={styles.paragraph}>
-          The actual fatality rate maintained at 10.3%. This could be either a sign that the testing coverage is increasing or cases are having a better outcome. Either way it is a good direction at this stage. The number of new cases are  higher than predicted, this might be down to better testing capability, rather than an actual worse trend.
+          Today is 14 days since lock down (23rd March, Monday) and there is over 35% drop in new cases and nearly 30% drop in new fatalities compare with yesterday. This could be a strong indicator of that the lock down measures are working. Hope this trend continues tomorrow.
         </div>
   
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 6th of April is 52,349 and nearly 80,000 by the 12th of April.
+          The predicted total cases by the 7th of April is over 56,000 and over 80,000 by the 14th of April.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 6th of April is arround 5500 and over 10,000 within a week, by the 13th April.
+          The predicted number of fatalities published on the 7th of April is around 5800 and over 10,000 by 14th April.
         </b>
       </div>
       
