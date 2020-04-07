@@ -91,20 +91,20 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Editor's Analysis (5:45pm, 6 April):
+        Editor's Analysis (5:10pm, 7 April):
         </div>
         <div style={styles.paragraph}>
-          Today is 14 days since lock down (23rd March, Monday) and there is over 35% drop in new cases and nearly 30% drop in new fatalities compare with yesterday. This could be a strong indicator of that the lock down measures are working. Hope this trend continues tomorrow.
+          Number of new cases is comparable to yesterday, however, the government website has cited that there is delay and missing data in today's number. The number of fatalities has shot up again, some news has reported this as a result of delay in reporting during the weekend. As there is a delay between the trend of new cases and fatalities, the increase of fatality should slow down in 10 days time.
         </div>
   
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 7th of April is over 56,000 and over 80,000 by the 14th of April.
+          The predicted total cases by the 8th of April will be near 60,000 and near 80,000 by the 14th of April.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 7th of April is around 5800 and over 10,000 by 14th April.
+          The predicted number of fatalities published on the 8th of April will be over 7000 and over 10,000 by 12th April.
         </b>
       </div>
       
