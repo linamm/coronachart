@@ -1,8 +1,8 @@
 //TODO: refactor this to a generic function.
 const getAdjustFactor = (cases, point_latest) => {
   // Give the date closer higher weighing. Give a higher weight if we think the current trend is here to stay, otherwise, give it lower.
-  // When unsure, give 0.5.
-  const weight = 0.5;
+  // When unsure, give 0.5. When thinking historical data more important use a value that's less than 0.5. When it is a more representative change. use a value that is higher than 0.5.
+  const weight = 0.3;
   const remainingWeight = 1 - weight;
 
   const adjustFactorOne = getSingleAdjucstFactor(cases, point_latest);
