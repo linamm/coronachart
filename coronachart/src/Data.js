@@ -29,7 +29,7 @@ import { getPredictCases, getNewCases, getFatalityRates } from './Predict.js';
   {"name": "5", "it": 4825, "cn": 1520, 'uk': 4932, 'uk_predict': 5136},
   {"name": "6", "it": 5475, "cn": 1665, 'uk': 5373, 'uk_predict': 5466},
   {"name": "7", "it": 6077, "cn": 1770, 'uk': 6159, 'uk_predict': 5854},
-  {"name": "8", "it": 7503, "cn": 1868},
+  {"name": "8", "it": 7503, "cn": 1868, 'uk': 7097, 'uk_predict': 7415},
   {"name": "9", "it": 8215, "cn": 2004},
   {"name": "10", "it": 9134, "cn": 2118},
   {"name": "11", "it": 10023, "cn": 2345},
@@ -38,6 +38,11 @@ import { getPredictCases, getNewCases, getFatalityRates } from './Predict.js';
   {"name": "14", "it": 12428, "cn": 2663},
   {"name": "15", "it": 13155, "cn": 2715},
   {"name": "16", "it": 13910, "cn": 2744},
+  {"name": "17", "it": 14681, "cn": 2788},
+  {"name": "18", "it": 15362, "cn": 2835},
+  {"name": "19", "it": 15887, "cn": 2870},
+  {"name": "20", "it": 16523, "cn": 2912},
+  {"name": "21", "it": 17127, "cn": 2943},
 ];
 
 const raw_total_cases = [
@@ -74,15 +79,18 @@ const raw_total_cases = [
   {"name": "5", "it": 69176, "cn": 74185, 'uk': 47806, 'uk_predict': 45619},
   {"name": "6", "it": 74386, "cn": 75465, 'uk': 51608, 'uk_predict': 52349},
   {"name": "7", "it": 80589, "cn": 76288, 'uk': 55242, 'uk_predict': 56036},
-  {"name": "8", "it": 86498, "cn": 76936},
+  {"name": "8", "it": 86498, "cn": 76936, 'uk': 60773, 'uk_predict': 59144},
   {"name": "9", "it": 92472, "cn": 76936},
   {"name": "10", "it": 97689, "cn": 77150},
   {"name": "11", "it": 101739, "cn": 77658},
   {"name": "12", "it": 105792, "cn": 78064},
   {"name": "13", "it": 110574, "cn": 78497},
   {"name": "14", "it": 115242, "cn": 78824},
-  {"name": "15", 'cn': 79251},
-
+  {"name": "15", 'it': 119827, 'cn': 79251},
+  {"name": "16", "it": 124632, "cn": 79824},
+  {"name": "17", "it": 128948, "cn": 80026},
+  {"name": "18", "it": 132547, "cn": 80151},
+  {"name": "19", "it": 135586, "cn": 80270},
 ];
 
 export const totalCaseStartDay = 6;

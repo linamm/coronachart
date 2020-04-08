@@ -94,17 +94,17 @@ function App() {
         Editor's Analysis (5:10pm, 7 April):
         </div>
         <div style={styles.paragraph}>
-          Number of new cases is comparable to yesterday, however, the government website has cited that there is delay and missing data in today's number. The number of fatalities has shot up again, some news has reported this as a result of delay in reporting during the weekend. As there is a delay between the trend of new cases and fatalities, the increase of fatality should slow down in 10 days time.
+         The number of new cases and number of fatalities has both increased today compare with yesterday.
         </div>
   
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 8th of April will be near 60,000 and near 80,000 by the 14th of April.
+          The predicted total cases by the 9th of April is 62,485 and near 80,000 by the 15th of April.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 8th of April will be over 7000 and over 10,000 by 12th April.
+          The predicted number of fatalities published on the 9th of April is arround 8400 and over 10,000 by 11th April.
         </b>
       </div>
       
