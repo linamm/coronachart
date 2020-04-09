@@ -91,10 +91,10 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Editor's Analysis (7:55pm, 8 April):
+        Editor's Analysis (7:30pm, 9 April):
         </div>
         <div style={styles.paragraph}>
-         The number of new cases has an increase of 50% and number of fatalities has a 20% increase, which is the opposite trend of the day before yesterday. This shows that there is no definitive slow down of the transmission of the virus yet. However, on three day average, the number of new cases and fatalities are at a stable pace rather than increasing. What we need to see is a definitive slow down quickly, otherwise, we will all need to stay in this kind of lock down state until the vaccine arrives.
+          Apologies that a silly update error was made yesterday and the prediction was wrong. I've to adjust the prediction for yesterday for the model to work again.
         </div>
   
       <div style={styles.paragraph}>
