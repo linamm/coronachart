@@ -94,7 +94,10 @@ function App() {
         Editor's Analysis (7:30pm, 9 April):
         </div>
         <div style={styles.paragraph}>
-          Apologies that a silly update error was made yesterday and the prediction was completely wrong. I've to correct the actual predicted data for yesterday to allow the model to work again.
+          Apologies that a silly update error was made yesterday and the prediction was completely wrong. I have to correct the actual predicted data for yesterday to allow the model to work again.
+        </div>
+        <div style={styles.paragraph}>
+          The fatality rate is now 12%, which is way higher than many other countries have seen. It is unlikely that British people are particularly less physically resillient to this virus or NHS is less able to save people. The most likely explaination is that the actual infected cases is much higher. For example, in South Korean, the fatality rate is arround 2%, which is still very high, but 5 times lower than the UK.
         </div>
   
       <div style={styles.paragraph}>
