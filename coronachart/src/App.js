@@ -94,17 +94,17 @@ function App() {
         Editor's Analysis (7:30pm, 9 April):
         </div>
         <div style={styles.paragraph}>
-          Apologies that a silly update error was made yesterday and the prediction was wrong. I've to adjust the prediction for yesterday for the model to work again.
+          Apologies that a silly update error was made yesterday and the prediction was completely wrong. I've to correct the actual predicted data for yesterday to allow the model to work again.
         </div>
   
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 9th of April is 62,485 and near 80,000 by the 15th of April.
+          The predicted total cases by the 10th of April is 68,594 and over 90,000 by the 18th of April.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 9th of April is arround 8400 and over 10,000 by 11th April.
+          The predicted number of fatalities published on the 10th of April is 8962 and over 15,000 by 18th April.
         </b>
       </div>
       
