@@ -91,23 +91,20 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Editor's Analysis (7:30pm, 9 April):
+        Editor's Analysis (7:40pm, 10 April):
         </div>
         <div style={styles.paragraph}>
-          Apologies that a silly update error was made yesterday and the prediction was completely wrong. I have to correct the actual predicted data for yesterday to allow the model to work again.
+            The doubling of the number of new cases is difficult to explain. It might be due to better testing. This puts the predition of the total cases in the UK closer to the trend seen in Italy. Considering the number of fatalites is so closely following Italy, it makes sense that the total cases do too.
+            The predition of fatalities is very accurate today.  The fatality rate stayed at 12% today.
         </div>
-        <div style={styles.paragraph}>
-          The fatality rate is now 12%, which is way higher than many other countries have seen. It is unlikely that British people are particularly less physically resillient to this virus or NHS is less able to save people. The most likely explaination is that the actual infected cases is much higher. For example, in South Korean, the fatality rate is arround 2%, which is still very high, but 5 times lower than the UK.
-        </div>
-  
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 10th of April is 68,594 and over 90,000 by the 18th of April.
+          The predicted total cases by the 11th of April is 78865 and over 100,000 by the 15th of April.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 10th of April is 8962 and over 15,000 by 18th April.
+          The predicted number of fatalities published on the 11th of April is 9881 and over 15,000 by 18th April.
         </b>
       </div>
       
