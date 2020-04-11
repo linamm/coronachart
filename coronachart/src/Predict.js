@@ -33,7 +33,7 @@ export const getPredictCases = (cases, point_latest) => {
   for (let i = 0; i < cases.length; i++) {
     if (i < point_latest) {
       temp[i] = cases[i];
-    } else if (i == point_latest) {
+    } else if (i === point_latest) {
     } else {
       const ratio_new_cases = (temp[i].it - temp[i - 1].it) / temp[i].it;
       const previous_uk =
@@ -55,7 +55,7 @@ export const getNewCases = (cases, keys, compares) => {
     entry.name = cases[i].name;
     for (let j = 0; j < keys.length; j++) {
       entry[keys[j]] =
-        (cases[i-1][compares[j]] == undefined ) ?
+        (cases[i-1][compares[j]] === undefined ) ?
           (cases[i][keys[j]] - cases[i-1][keys[j]]) :
             (cases[i][keys[j]] - cases[i-1][compares[j]]);
     }
@@ -71,7 +71,7 @@ export const getNewCases = (cases, keys, compares) => {
  */
 
 export const getFatalityRates = (fatalityCases, totalCases, keys) => {
-  if (fatalityCases.length != totalCases.length) return [];
+  if (fatalityCases.length !== totalCases.length) return [];
   console.log("length is" + fatalityCases.length);
   var rates = [];
   for(let i = 1; i < fatalityCases.length; i++) {
