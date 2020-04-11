@@ -91,20 +91,21 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Editor's Analysis (7:40pm, 10 April):
+        Editor's Analysis (8:20pm, 11 April):
         </div>
         <div style={styles.paragraph}>
-            The doubling of the number of new cases is difficult to explain. It might be due to better testing. This puts the predition of the total cases in the UK closer to the trend seen in Italy. Considering the number of fatalites is so closely following Italy, it makes sense that the total cases do too.
-            The predition of fatalities is very accurate today.  The fatality rate stayed at 12% today.
+            The predicted new cases and fatalities are both very accurate for today. That means the future prediction are more likely to be correct. The current prediction for the next week is good, following the Italy trend of a slow down in both number of new cases and fatalities.
+            The fatality rate stayed very high at 12.5%. Even if the actual number of total cases is much higher, this is still a very alarming figure. This means that herd immunity simply cannot be put back on the table. The impact of 2-5% of the whole population eliminated in a short period (could be as short as a few months), is just going to traumatising and unthinkable.
+            Have faith in the old method of quarentine, it is harsh, but, it is working.
         </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 11th of April is 78865 and over 100,000 by the 15th of April.
+          The predicted total cases by the 12th of April is 83286 and over 100,000 by the 16th of April.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 11th of April is 9881 and over 15,000 by 18th April.
+          The predicted number of fatalities published on the 12th of April is 10583 and nearly 15,000 by 18th April.
         </b>
       </div>
       
