@@ -11,7 +11,7 @@ import {
   Bar,
   BarChart
 } from "recharts";
-import { totalCases, fatalityCases, newCases, newFatalityCases, fatalityRates } from "./Data.js";
+import { displayTotalCases, displayFatalityCases, newCases, newFatalityCases, fatalityRates } from "./Data.js";
 import ReactGA from "react-ga";
 
 ReactGA.initialize("UA-101607316-3");
@@ -91,17 +91,23 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (5:20pm, 12 April):
+        Updated (7:00pm, 13 April):
+        The number of new cases and fatalities remain at a constant rate, which is better than increasing, but, not enough to see a definitely trend of slowing down.
+
+        Only a definitive slow down will be sufficient enough to bring the transmission to a stop quicker.
+        Other measures we can take are: 
+        Contact tracing for confirmed cases and therefore can quickly bringing potential cases into quarentine. This is equivelent to the measures taken during the containment phase.
+        Better personal protection measures adopted by everyone and therefore reduce the chances of accidental transmission.
         </div>
         
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 13th of April is 88992 and over 100,000 by the 16th of April.
+          The predicted total cases by the 14th of April is 92947 and over 100,000 by the 16th of April.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 13th of April is 11427 and over 15,000 by 18th April.
+          The predicted number of fatalities published on the 14th of April is 12055 and over 15,000 by 19th April.
         </b>
       </div>
       
@@ -110,7 +116,7 @@ function App() {
           width={graphSize.width}
           height={graphSize.height}
           margin={{ top: 5, right: 5, bottom: 5, left: 5 }}
-          data={totalCases}
+          data={displayTotalCases}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
@@ -150,17 +156,14 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        The starting point of the first graph is the day when Italy has 150
-        cases (2020-02-23), while the UK has 160 cases (2020-03-06). At that
-        point, UK is 12 days behind Italy.
+        Italy has 150 cases (2020-02-23), while the UK has 160 cases (2020-03-06). At that
+        point, UK is 12 days behind Italy. The data from Italy and UK is aligned from that point.
       </div>
       <div style={styles.paragraph}>
         In the early days, the UK curve is quite closely following the Italy
         one, therefore a simplified model to predict the uk numbers is to track
-        the daily growth rate of cases in Italy. However, the UK seems to be
-        doing much better later on, this might be a result of the social
-        distancing measures are working. Therefore, the prediction model takes
-        into account of a previous predition error.{" "}
+        the daily growth rate of cases in Italy. The prediction model also takes
+        into account of previous predition errors in order to achieve a more accurate number.
       </div>
 
 
@@ -174,7 +177,7 @@ function App() {
           width={graphSize.width}
           height={graphSize.height}
           margin={{ top: 5, right: 5, bottom: 5, left: 5 }}
-          data={fatalityCases}
+          data={displayFatalityCases}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
