@@ -91,23 +91,20 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (7:00pm, 13 April):
-        The number of new cases and fatalities remain at a constant rate, which is better than increasing, but, not enough to see a definitely trend of slowing down.
-
-        Only a definitive slow down will be sufficient enough to bring the transmission to a stop quicker.
-        Other measures we can take are: 
-        Contact tracing for confirmed cases and therefore can quickly bringing potential cases into quarentine. This is equivelent to the measures taken during the containment phase.
-        Better personal protection measures adopted by everyone and therefore reduce the chances of accidental transmission.
+        Updated (5:30pm, 14 April):
+        China went to lock down on the 23rd of Jan when there was only 771 cases with 259 new daily cases. The number of new cases is 214 on 23 Feb and stayed pretty much below that afterwards.
+        The UK went to lock down on the 23rd of March when there was 6650 total cases with 967 new daily cases. The forcast shows there will still be arround 3000 cases by the 23rd of April. This is a long way from the lock down point yet.
+        This probably shows that the lockdown in the UK has not had a similar effect as quickly as has been seen in China, however, it is following the trend in Italy very closely.
         </div>
         
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 14th of April is 92947 and over 100,000 by the 16th of April.
+          The predicted total cases by the 15th of April is 97894 and over 120,000 by the 22nd of April.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 14th of April is 12055 and over 15,000 by 19th April.
+          The predicted number of fatalities published on the 15th of April is 12784. 
         </b>
       </div>
       

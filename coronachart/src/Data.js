@@ -35,7 +35,7 @@ import { getPredictCases, getNewCases, getFatalityRates } from './Predict.js';
   {"name": "11", "it": 10023, "cn": 2345, 'uk': 9875, 'uk_predict': 9881},
   {"name": "12", "it": 10779, "cn": 2442, 'uk': 10621, 'uk_predict': 10583},
   {"name": "13", "it": 11591, "cn": 2592, 'uk': 11329, 'uk_predict': 11427},
-  {"name": "14", "it": 12428, "cn": 2663},
+  {"name": "14", "it": 12428, "cn": 2663, 'uk': 12107, 'uk_predict': 12055},
   {"name": "15", "it": 13155, "cn": 2715},
   {"name": "16", "it": 13910, "cn": 2744},
   {"name": "17", "it": 14681, "cn": 2788},
@@ -90,7 +90,7 @@ const raw_total_cases = [
   {"name": "11", "it": 101739, "cn": 77658, 'uk': 78991, 'uk_predict': 78865},
   {"name": "12", "it": 105792, "cn": 78064, 'uk': 84279, 'uk_predict': 83286},
   {"name": "13", "it": 110574, "cn": 78497, 'uk': 88621, 'uk_predict': 88992},
-  {"name": "14", "it": 115242, "cn": 78824},
+  {"name": "14", "it": 115242, "cn": 78824, 'uk': 93873,'uk_predict': 92947},
   {"name": "15", 'it': 119827, 'cn': 79251},
   {"name": "16", "it": 124632, "cn": 79824},
   {"name": "17", "it": 128948, "cn": 80026},
@@ -106,7 +106,7 @@ const raw_total_cases = [
 
 export const totalCaseStartDay = 6;
 export const fatalityCaseStartDay = 14;
-export const Today = 31 + 13; // 31 days in March + days in April
+export const Today = 31 + 14; // 31 days in March + days in April
 export const TodayTotalIndex = Today - totalCaseStartDay;
 export const TodayFatalityIndex = Today - fatalityCaseStartDay;
 const totalCases = getPredictCases(raw_total_cases, TodayTotalIndex);
