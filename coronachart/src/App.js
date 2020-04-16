@@ -91,17 +91,17 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (8:00pm, 15 April):
+        Updated (5:00pm, 16 April):
         </div>
         
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 16th of April is 102,823 and over 120,000 by the 21nd of April.
+          The predicted total cases by the 17th of April is 106,835 and near 140,000 by the 27th of April.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 16th of April is 13617. 
+          The predicted number of fatalities published on the 17th of April is 14522 and over 20,000 by 27th of April.
         </b>
       </div>
       
