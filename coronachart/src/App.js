@@ -224,6 +224,8 @@ function App() {
             <Tooltip />
             <Legend />
             <Bar dataKey="uk" fill={colors.uk} name='New Cases UK'/>
+            <Bar dataKey="it" fill={colors.it} name='New Cases Italy'/>
+
             <Bar dataKey="uk_predict" fill={colors.uk_predict} name='New Cases UK Predict' />
             {/* <Bar dataKey="it" fill={colors.it} name='New Cases Italy Predict' /> */}
 
