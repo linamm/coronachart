@@ -91,20 +91,19 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (11:55pm, 18 April):
+        Updated (17:00pm, 19 April):
         </div>
         <div>
-            It is very likely that the UK is heading for worse than Italy.
         </div>
         
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 19th of April is 120,146 and over 150,000 by the 24th of April.
+          The predicted total cases by the 20th of April is 126, 100 and over 150,000 by the 24th of April.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 19th of April is 16367 and over 20,000 by 23th of April.
+          The predicted number of fatalities published on the 20th of April is 16,633 and over 20,000 by 27th of April.
         </b>
       </div>
       
@@ -162,7 +161,7 @@ function App() {
         the daily growth rate of cases in Italy. The prediction model also takes
         into account of previous predition errors in order to achieve a more accurate number.
 
-        On 18th April, the predition using the above model has not been quite off for two days in a row, which indicates the UK is no longer following the curve set by Italy. The new prediction is based on trend analysis by calculating the running average and rate change of the past 7 days of daily new cases and new fatalities.
+        On 18th April, the predition using the above model has been quite off for two days in a row, which indicates that the UK is no longer following the curve set by Italy. The new prediction is based on trend analysis by calculating the running average rate and rate change of the past 7 days of daily new cases and new fatalities.
       </div>
 
 
