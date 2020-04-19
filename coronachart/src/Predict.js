@@ -63,7 +63,7 @@ export const getPredictCases = (cases, point_latest) => {
       temp[i] = cases[i];
     } else if (i === point_latest) {
     } else {
-      //const ratio_new_cases = (temp[i].it - temp[i - 1].it) / (temp[i - 1].it - temp[i - 2].it);
+
       const previous_uk =
         i > point_latest + 1? temp[i - 1].uk_predict : temp[i - 1].uk;
       
@@ -71,12 +71,9 @@ export const getPredictCases = (cases, point_latest) => {
         i > point_latest + 2 ? temp[i - 2].uk_predict : temp[i - 2].uk;
       
       const previous_new_uk = previous_uk - previous_previous_uk;
-
-     // const new_case_rate_change = getNewCaseRateChange(all_previous_cases);
       
-      //TODO: refactor to a generic function
-     const new_cases_rate = getNewCasesRate(cases, point_latest, 7, 0);
-     const new_cases_rate_previous = getNewCasesRate(cases, point_latest, 7, 1);
+      const new_cases_rate = getNewCasesRate(cases, point_latest, 7, 0);
+      const new_cases_rate_previous = getNewCasesRate(cases, point_latest, 7, 1);
 
     const new_rate_change = new_cases_rate - new_cases_rate_previous;
       const uk_predict = Math.ceil(
