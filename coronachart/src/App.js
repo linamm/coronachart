@@ -94,12 +94,12 @@ function App() {
         Updated (11:55pm, 18 April):
         </div>
         <div>
-            Now it's looking like that the UK is heading for worse than Italy.
+            It is very likely that the UK is heading for worse than Italy.
         </div>
         
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 19th of April is 120, 146 and over 150,000 by the 24th of April.
+          The predicted total cases by the 19th of April is 120,146 and over 150,000 by the 24th of April.
         </b>
       </div>
       <div style={styles.paragraph}>

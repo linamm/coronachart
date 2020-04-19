@@ -47,12 +47,17 @@ export const getPredictCasesItalyTrend = (cases, point_latest) => {
   return temp;
 };
 
+const getNewCasesRate = (cases, point_latest, regression_count, days_before=0) => {
+  let total = 0;
+  for(let i = 0; i < regression_count; i++) {
+    total += (cases[point_latest - i - days_before].uk - cases[point_latest - i - 1 - days_before].uk)/(cases[point_latest - i - 1 - days_before].uk - cases[point_latest - i - 2 - days_before].uk);
+  }
+  return total/regression_count;
+}
+
 //Predict the cases: following UK new trend.
 export const getPredictCases = (cases, point_latest) => {
   let temp = cases;
-  //TODO: Due to algorithm change this cannot be used for the first few times just after the algorithm change. 
- // const adjustFactor = getAdjustFactor(cases, point_latest);
-
   for (let i = 0; i < cases.length; i++) {
     if (i < point_latest) {
       temp[i] = cases[i];
@@ -69,25 +74,9 @@ export const getPredictCases = (cases, point_latest) => {
 
      // const new_case_rate_change = getNewCaseRateChange(all_previous_cases);
       
-     //TODO: deduce a generic function.
-      const new_cases_rate = 
-      ((cases[point_latest].uk - cases[point_latest - 1].uk)/ (cases[point_latest - 1].uk - cases[point_latest - 2].uk) 
-      + (cases[point_latest - 1].uk - cases[point_latest - 2].uk)/ (cases[point_latest - 2].uk - cases[point_latest - 3].uk) 
-      + (cases[point_latest - 2].uk - cases[point_latest - 3].uk)/ (cases[point_latest - 3].uk - cases[point_latest - 4].uk)
-      + (cases[point_latest - 3].uk - cases[point_latest - 4].uk)/ (cases[point_latest - 4].uk - cases[point_latest - 5].uk)
-      + (cases[point_latest - 4].uk - cases[point_latest - 5].uk)/ (cases[point_latest - 5].uk - cases[point_latest - 6].uk)
-      + (cases[point_latest - 5].uk - cases[point_latest - 6].uk)/ (cases[point_latest - 6].uk - cases[point_latest - 7].uk)
-      + (cases[point_latest - 6].uk - cases[point_latest - 7].uk)/ (cases[point_latest - 7].uk - cases[point_latest - 8].uk))/7;
-
-     const new_cases_rate_previous = 
-       ((cases[point_latest - 1].uk - cases[point_latest - 2].uk)/ (cases[point_latest - 2].uk - cases[point_latest - 3].uk) 
-     + (cases[point_latest - 2].uk - cases[point_latest - 3].uk)/ (cases[point_latest - 3].uk - cases[point_latest - 4].uk)
-     + (cases[point_latest - 3].uk - cases[point_latest - 4].uk)/ (cases[point_latest - 4].uk - cases[point_latest - 5].uk)
-     + (cases[point_latest - 4].uk - cases[point_latest - 5].uk)/ (cases[point_latest - 5].uk - cases[point_latest - 6].uk)
-     + (cases[point_latest - 5].uk - cases[point_latest - 6].uk)/ (cases[point_latest - 6].uk - cases[point_latest - 7].uk)
-     + (cases[point_latest - 6].uk - cases[point_latest - 7].uk)/ (cases[point_latest - 7].uk - cases[point_latest - 8].uk)
-     + (cases[point_latest - 7].uk - cases[point_latest - 8].uk)/ (cases[point_latest - 8].uk - cases[point_latest - 9].uk))/7;
-
+      //TODO: refactor to a generic function
+     const new_cases_rate = getNewCasesRate(cases, point_latest, 7, 0);
+     const new_cases_rate_previous = getNewCasesRate(cases, point_latest, 7, 1);
 
     const new_rate_change = new_cases_rate - new_cases_rate_previous;
       const uk_predict = Math.ceil(
