@@ -47,13 +47,22 @@ export const getPredictCasesItalyTrend = (cases, point_latest) => {
   return temp;
 };
 
-const getNewCasesRate = (cases, point_latest, regression_count, days_before=0) => {
+const getNewCasesRate = (
+  cases,
+  point_latest,
+  regression_count,
+  days_before = 0
+) => {
   let total = 0;
-  for(let i = 0; i < regression_count; i++) {
-    total += (cases[point_latest - i - days_before].uk - cases[point_latest - i - 1 - days_before].uk)/(cases[point_latest - i - 1 - days_before].uk - cases[point_latest - i - 2 - days_before].uk);
+  for (let i = 0; i < regression_count; i++) {
+    total +=
+      (cases[point_latest - i - days_before].uk -
+        cases[point_latest - i - 1 - days_before].uk) /
+      (cases[point_latest - i - 1 - days_before].uk -
+        cases[point_latest - i - 2 - days_before].uk);
   }
-  return total/regression_count;
-}
+  return total / regression_count;
+};
 
 //Predict the cases: following UK new trend.
 export const getPredictCases = (cases, point_latest) => {
@@ -63,19 +72,23 @@ export const getPredictCases = (cases, point_latest) => {
       temp[i] = cases[i];
     } else if (i === point_latest) {
     } else {
-
       const previous_uk =
-        i > point_latest + 1? temp[i - 1].uk_predict : temp[i - 1].uk;
-      
+        i > point_latest + 1 ? temp[i - 1].uk_predict : temp[i - 1].uk;
+
       const previous_previous_uk =
         i > point_latest + 2 ? temp[i - 2].uk_predict : temp[i - 2].uk;
-      
-      const previous_new_uk = previous_uk - previous_previous_uk;
-      
-      const new_cases_rate = getNewCasesRate(cases, point_latest, 7, 0);
-      const new_cases_rate_previous = getNewCasesRate(cases, point_latest, 7, 1);
 
-    const new_rate_change = new_cases_rate - new_cases_rate_previous;
+      const previous_new_uk = previous_uk - previous_previous_uk;
+
+      const new_cases_rate = getNewCasesRate(cases, point_latest, 7, 0);
+      const new_cases_rate_previous = getNewCasesRate(
+        cases,
+        point_latest,
+        7,
+        1
+      );
+
+      const new_rate_change = new_cases_rate - new_cases_rate_previous;
       const uk_predict = Math.ceil(
         previous_uk + previous_new_uk * new_cases_rate * (1 + new_rate_change)
       );
@@ -85,27 +98,26 @@ export const getPredictCases = (cases, point_latest) => {
   return temp;
 };
 
-
 // Generate new cases:
 export const getNewCases = (cases, keys, compares) => {
   var newEntries = [];
-  for(let i = 1; i < cases.length; i++) {
+  for (let i = 1; i < cases.length; i++) {
     const entry = {};
     entry.name = cases[i].name;
     for (let j = 0; j < keys.length; j++) {
       entry[keys[j]] =
-        (cases[i-1][compares[j]] === undefined ) ?
-          (cases[i][keys[j]] - cases[i-1][keys[j]]) :
-            (cases[i][keys[j]] - cases[i-1][compares[j]]);
+        cases[i - 1][compares[j]] === undefined
+          ? cases[i][keys[j]] - cases[i - 1][keys[j]]
+          : cases[i][keys[j]] - cases[i - 1][compares[j]];
     }
     newEntries.push(entry);
   }
   return newEntries;
 };
 
-//Generate fatality rate. 
+//Generate fatality rate.
 /**
- * Make sure to pass same size matching array. 
+ * Make sure to pass same size matching array.
  * keys, list of countries of interest
  */
 
@@ -113,15 +125,15 @@ export const getFatalityRates = (fatalityCases, totalCases, keys) => {
   if (fatalityCases.length !== totalCases.length) return [];
   console.log("length is" + fatalityCases.length);
   var rates = [];
-  for(let i = 1; i < fatalityCases.length; i++) {
+  for (let i = 1; i < fatalityCases.length; i++) {
     const entry = {};
     entry.name = fatalityCases[i].name;
     for (let j = 0; j < keys.length; j++) {
-      entry[keys[j]] = (fatalityCases[i][keys[j]]/totalCases[i][keys[j]]).toFixed(3);
+      entry[keys[j]] = (
+        fatalityCases[i][keys[j]] / totalCases[i][keys[j]]
+      ).toFixed(3);
     }
     rates.push(entry);
   }
   return rates;
-}
-
-
+};
