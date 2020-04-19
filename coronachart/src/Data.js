@@ -118,12 +118,12 @@ export const TodayTotalIndex = Today - totalCaseStartDay;
 export const TodayFatalityIndex = Today - fatalityCaseStartDay;
 const totalCases = getPredictCases(raw_total_cases, TodayTotalIndex);
 const fatalityCases = getPredictCases(raw_death_cases, TodayFatalityIndex);
-export const displayTotalCases = totalCases.slice(TodayTotalIndex - 12, TodayTotalIndex + 12 );
-export const displayFatalityCases = fatalityCases.slice(TodayFatalityIndex - 12, TodayFatalityIndex + 12);
-export const newCases = getNewCases(totalCases, ['uk', 'uk_predict', 'it'], ['uk', 'uk', 'it']).slice(TodayTotalIndex - 12, TodayTotalIndex + 10 ); // Past 12 days and Future 10 days
-export const newFatalityCases = getNewCases(fatalityCases, ['uk', 'uk_predict'], ['uk', 'uk']).slice(TodayFatalityIndex - 12, TodayFatalityIndex + 10 ); // Past 12 days and Future 10 days
+export const displayTotalCases = totalCases;
+export const displayFatalityCases = fatalityCases;
+export const newCases = getNewCases(totalCases, ['uk', 'uk_predict', 'it'], ['uk', 'uk', 'it']).slice(TodayTotalIndex - 30, TodayTotalIndex + 10 ); // Past 12 days and Future 10 days
+export const newFatalityCases = getNewCases(fatalityCases, ['uk', 'uk_predict'], ['uk', 'uk']).slice(TodayFatalityIndex - 30, TodayFatalityIndex + 10 ); // Past 12 days and Future 10 days
 
 export const fatalityRates = getFatalityRates(
-  fatalityCases.slice(TodayFatalityIndex - 12, TodayFatalityIndex + 8),
-  totalCases.slice(TodayTotalIndex - 12, TodayTotalIndex + 8),
+  fatalityCases.slice(TodayFatalityIndex - 30, TodayFatalityIndex + 8),
+  totalCases.slice(TodayTotalIndex - 30, TodayTotalIndex + 8),
   ['uk', 'it', 'uk_predict', 'cn']);
