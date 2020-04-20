@@ -65,13 +65,28 @@ const getNewCasesRate = (
 };
 
 //Predict the cases: following UK new trend.
-export const getPredictCases = (cases, point_latest) => {
+export const getPredictCases = (cases, point_latest, predict_days) => {
   let temp = cases;
-  for (let i = 0; i < cases.length; i++) {
+  console.log('cases length , i is : ' + cases.length);
+  console.log('predict_days: ' + predict_days);
+
+  const bound = cases.length + predict_days;
+  console.log('cases bound , i is : ' + bound);
+
+
+  for (let i = 0; i < bound; i++) {
     if (i < point_latest) {
       temp[i] = cases[i];
     } else if (i === point_latest) {
     } else {
+      console.log('hello, i is : ' + i);
+
+      if (i > cases.length - 1) {
+        const number = parseInt(temp[i-1].name) + 1;
+        const date = number > 30 ? number - 30 : number;
+        temp.push({'uk_predict': undefined, 'name' : date});
+        console.log('hello, pushing ;' + date);
+      }
       const previous_uk =
         i > point_latest + 1 ? temp[i - 1].uk_predict : temp[i - 1].uk;
 

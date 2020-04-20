@@ -81,7 +81,7 @@ function App() {
     // width: dimensions.width * 0.8,
     // height: dimensions.width * 0.6
     width: 1000,
-    height: 300
+    height: 400
   }
 
   return (
@@ -120,6 +120,14 @@ function App() {
           <Tooltip />
           <Legend verticalAlign="top" height={36} />
           <Line
+            name="Predicted Total Cases in the UK"
+            type="monotone"
+            dataKey="uk_predict"
+            stroke={colors.uk_predict}
+            yAxisId={0}
+          />
+          
+          <Line
             name="Total Cases in Italy"
             type="monotone"
             dataKey="it"
@@ -134,13 +142,7 @@ function App() {
             stroke={colors.china}
             yAxisId={0}
           />
-          <Line
-            name="Predicted Total Cases in the UK"
-            type="monotone"
-            dataKey="uk_predict"
-            stroke={colors.uk_predict}
-            yAxisId={0}
-          />
+
           <Line
             name="Total Cases in the UK"
             type="monotone"
