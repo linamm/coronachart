@@ -91,19 +91,19 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (17:00pm, 19 April):
+        Updated (21:30pm, 21 April):
         </div>
         <div>
         </div>
         
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 20th of April is 126, 100 and over 150,000 by the 24th of April.
+          The predicted total cases by the 20th of April is 129,503 and over 200,000 by the 4th of May.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 20th of April is 16,633 and over 20,000 by 27th of April.
+          The predicted number of fatalities published on the 21th of April is 16,925 and near 20,000 by 2nd of May.
         </b>
       </div>
       
@@ -126,7 +126,7 @@ function App() {
             stroke={colors.uk_predict}
             yAxisId={0}
           />
-          
+
           <Line
             name="Total Cases in Italy"
             type="monotone"
