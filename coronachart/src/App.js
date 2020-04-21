@@ -91,19 +91,20 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (21:30pm, 21 April):
+        Updated (21:00pm, 21 April):
         </div>
         <div>
+          Now the graph looks 30 days in the future. Today's new data puts the trend into a completely different trajectory. It is looking very bad again. Because of the recent change of the way the prediction is made, it is not clear if this prediction model is reliable. Further observation needed to make adjustment.
         </div>
         
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 20th of April is 129,503 and over 200,000 by the 4th of May.
+          The predicted total cases by the 22nd of April is 133,567 and over 200,000 by the 3rd of May.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 21th of April is 16,925 and near 20,000 by 2nd of May.
+          The predicted number of fatalities published on the 22nd of April is 18,214 and over 20,000 by 24th of April.
         </b>
       </div>
       

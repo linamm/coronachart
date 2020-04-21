@@ -47,20 +47,22 @@ export const getPredictCasesItalyTrend = (cases, point_latest) => {
   return temp;
 };
 
-const getNewCasesRate = (
-  cases,
-  point_latest,
-  regression_count,
-  days_before = 0
-) => {
+const getRateRunningAverage = (cases, index, regression_count, point_latest) => {
+  let current = 0;
+  let previous = 0;
+  for(let i = 0; i < regression_count; i++) {
+    current += (index - i > point_latest - 1) ? cases[index - i].uk_predict : cases[index - i].uk;
+    previous += (index - i - 1> point_latest - 1) ? cases[index - i - 1].uk_predict : cases[index - i - 1].uk;
+  }
+  return current / previous;
+}
+
+const getNewCasesRate = (cases, point_latest,regression_count,days_before = 0) => {
   let total = 0;
   for (let i = 0; i < regression_count; i++) {
-    total +=
-      (cases[point_latest - i - days_before].uk -
-        cases[point_latest - i - 1 - days_before].uk) /
-      (cases[point_latest - i - 1 - days_before].uk -
-        cases[point_latest - i - 2 - days_before].uk);
+    total += getRateRunningAverage(cases, point_latest - i - days_before, regression_count, point_latest);
   }
+  console.log('case rate: ' + total/regression_count);
   return total / regression_count;
 };
 
