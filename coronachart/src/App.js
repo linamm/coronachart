@@ -97,13 +97,57 @@ function App() {
         
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 22nd of April is 133,248, adding 4202 new cases and over 200,000 by the 12th of May.
+          The predicted total cases by the 23rd of April is 137,915, adding 4220 new cases and over 200,000 by the 8th of May.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 22nd of April is 18,152, adding 815 new fatalities and over 20,000 by 25th of April.
+          The predicted number of fatalities published on the 23rd of April is 18,856, adding 757 new fatalities and over 20,000 by 25th of April.
         </b>
+      </div>
+
+      <div style={styles.graph}>
+          <BarChart
+            width={graphSize.width}
+            height={graphSize.height}
+            data={newCases}
+            margin={{
+              top: 5, right: 30, left: 20, bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="uk" fill={colors.uk} name='New Cases UK'/>
+            <Bar dataKey="it" fill={colors.it} name='New Cases Italy'/>
+
+            <Bar dataKey="uk_predict" fill={colors.uk_predict} name='New Cases UK Predict' />
+            {/* <Bar dataKey="it" fill={colors.it} name='New Cases Italy Predict' /> */}
+
+          </BarChart>
+
+      </div>
+
+      <div style={styles.graph}>
+          <BarChart
+            width={graphSize.width}
+            height={graphSize.height}
+            data={newFatalityCases}
+            margin={{
+              top: 5, right: 30, left: 20, bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="uk" fill={colors.uk} name='New Fatalities UK'/>
+            <Bar dataKey="uk_predict" fill={colors.uk_predict} name='New Fatalities UK Predict' />
+          </BarChart>
+
       </div>
       
       <div style={styles.graph}>
@@ -152,18 +196,7 @@ function App() {
         </LineChart>
       </div>
 
-      <div style={styles.paragraph}>
-        Italy has 150 cases (2020-02-23), while the UK has 160 cases (2020-03-06). At that
-        point, UK is 12 days behind Italy. The data from Italy and UK is aligned from that point.
-      </div>
-      <div style={styles.paragraph}>
-        In the early days, the UK curve is quite closely following the Italy
-        one, therefore a simplified model to predict the uk numbers is to track
-        the daily growth rate of cases in Italy. The prediction model also takes
-        into account of previous predition errors in order to achieve a more accurate number.
 
-        On 18th April, the predition using the above model has been quite off for two days in a row, which indicates that the UK is no longer following the curve set by Italy. The new prediction is based on trend analysis by calculating the running average rate and rate change of the past 7 days of daily new cases and new fatalities.
-      </div>
 
 
       <div style={styles.paragraph}>
@@ -215,50 +248,6 @@ function App() {
       </div>
 
       <div style={styles.graph}>
-          <BarChart
-            width={graphSize.width}
-            height={graphSize.height}
-            data={newCases}
-            margin={{
-              top: 5, right: 30, left: 20, bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="uk" fill={colors.uk} name='New Cases UK'/>
-            <Bar dataKey="it" fill={colors.it} name='New Cases Italy'/>
-
-            <Bar dataKey="uk_predict" fill={colors.uk_predict} name='New Cases UK Predict' />
-            {/* <Bar dataKey="it" fill={colors.it} name='New Cases Italy Predict' /> */}
-
-          </BarChart>
-
-      </div>
-
-      <div style={styles.graph}>
-          <BarChart
-            width={graphSize.width}
-            height={graphSize.height}
-            data={newFatalityCases}
-            margin={{
-              top: 5, right: 30, left: 20, bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="uk" fill={colors.uk} name='New Fatalities UK'/>
-            <Bar dataKey="uk_predict" fill={colors.uk_predict} name='New Fatalities UK Predict' />
-          </BarChart>
-
-      </div>
-
-      <div style={styles.graph}>
         <LineChart
           width={graphSize.width}
           height={graphSize.height}
@@ -299,6 +288,19 @@ function App() {
             yAxisId={0}
           />
         </LineChart>
+      </div>
+
+      <div style={styles.paragraph}>
+        Italy has 150 cases (2020-02-23), while the UK has 160 cases (2020-03-06). At that
+        point, UK is 12 days behind Italy. The data from Italy and UK is aligned from that point.
+      </div>
+      <div style={styles.paragraph}>
+        In the early days, the UK curve is quite closely following the Italy
+        one, therefore a simplified model to predict the uk numbers is to track
+        the daily growth rate of cases in Italy. The prediction model also takes
+        into account of previous predition errors in order to achieve a more accurate number.
+
+        On 18th April, the predition using the above model has been quite off for two days in a row, which indicates that the UK is no longer following the curve set by Italy. The new prediction is based on trend analysis by calculating the running average rate and rate change of the past 7 days of daily new cases and new fatalities.
       </div>
 
       <div style={styles.paragraph}>
