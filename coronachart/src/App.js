@@ -159,7 +159,7 @@ function App() {
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
-          <YAxis dataKey="it" />
+          <YAxis dataKey="uk_predict" />
           <Tooltip />
           <Legend verticalAlign="top" height={36} />
           <Line
@@ -213,7 +213,7 @@ function App() {
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
-          <YAxis dataKey="it" />
+          <YAxis dataKey="uk_predict" />
           <Tooltip />
           <Legend verticalAlign="top" height={36} />
           <Line
@@ -256,7 +256,7 @@ function App() {
         >
           <CartesianGrid strokeDasharray="3 4" />
           <XAxis dataKey="name" />
-          <YAxis dataKey="it" />
+          <YAxis dataKey="uk_predict" />
           <Tooltip />
           <Legend verticalAlign="top" height={36} />
           <Line
