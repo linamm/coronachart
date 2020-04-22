@@ -91,18 +91,18 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (22:50pm, 21 April)
+        Updated (18:50pm, 22 April)
         </div>
 
         
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 23rd of April is 137,915, adding 4220 new cases and over 200,000 by the 8th of May.
+          The predicted total cases by the 23rd of April is 137,915, adding 4220 new cases and over 200,000 by the 8th of May and near 300,000 by early June.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 23rd of April is 18,856, adding 757 new fatalities and over 20,000 by 25th of April.
+          The predicted number of fatalities published on the 23rd of April is 18,856, adding 757 new fatalities and over 20,000 by 25th of April and over 30,000 by the 9th of May.
         </b>
       </div>
 
