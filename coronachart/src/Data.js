@@ -51,6 +51,12 @@ import { getPredictCases, getNewCases, getFatalityRates } from './Predict.js';
   {"name": "27", "it": 20465, "cn": 3119},
   {"name": "28", "it": 21067, "cn": 3136},
   {"name": "29", "it": 21645, "cn": 3158},
+  {"name": "30", "it": 22170, "cn": 3169 },
+  {"name": "1", "it": 22745, "cn": 3176 },
+  {"name": "2", "it": 23227, "cn": 3189},
+  {"name": "3", "it": 23660, "cn": 3199},
+  {"name": "4", "it": 24114, "cn": 3213},
+  {"name": "5", "it": 24648, "cn": 3226},
 ];
 
 const raw_total_cases = [
@@ -107,8 +113,12 @@ const raw_total_cases = [
   {"name": "25", "it": 159516, "cn": 80754},
   {"name": "26", "it": 162488, "cn": 80778},
   {"name": "27", "it": 165155, "cn": 80793},
-
-
+  {"name": "28", "it": 168941, "cn": 80813},
+  {"name": "29", "it": 172434, "cn": 80824},
+  {"name": "30", "it": 175925, "cn": 80844},
+  {"name": "1", "it": 178972, "cn": 80860},
+  {"name": "2", "it": 181228, "cn": 80881},
+  {"name": "3", "it": 183957, "cn": 80894},
 ];
 
 export const numberOfDaysInTheFuture = 30;
