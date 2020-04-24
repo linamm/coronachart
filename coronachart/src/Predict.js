@@ -72,6 +72,10 @@ const getNewCasesRate = (cases, point_latest,regression_count,days_before = 0) =
   return total / regression_count;
 };
 
+const getNewCasesRunningAverage = (cases, ) => {
+
+}
+
 //Predict the cases: following UK new trend.
 export const getPredictCases = (cases, point_latest, predict_days) => {
   let temp = cases;
@@ -95,13 +99,13 @@ export const getPredictCases = (cases, point_latest, predict_days) => {
         temp.push({'uk_predict': undefined, 'name' : date});
         console.log('hello, pushing ;' + date);
       }
-      const previous_uk =
-        i > point_latest + 1 ? temp[i - 1].uk_predict : temp[i - 1].uk;
+      const previous_uk = getCase(temp, i - 1, point_latest);
+     // const previous_previous_uk = getCase(temp, i - 2, point_latest);
+      const previous_4_uk = getCase(temp, i - 4, point_latest);
 
-      const previous_previous_uk =
-        i > point_latest + 2 ? temp[i - 2].uk_predict : temp[i - 2].uk;
+      const previous_new_3_average = (previous_uk - previous_4_uk)/3;
 
-      const previous_new_uk = previous_uk - previous_previous_uk;
+     // const previous_new_uk = previous_uk - previous_previous_uk;
 
       const new_cases_rate = getNewCasesRate(cases, point_latest, 7, 0);
       const new_cases_rate_previous = getNewCasesRate(
@@ -113,7 +117,7 @@ export const getPredictCases = (cases, point_latest, predict_days) => {
 
       const new_rate_change = new_cases_rate - new_cases_rate_previous;
       const uk_predict = Math.ceil(
-        previous_uk + previous_new_uk * new_cases_rate * (1 + new_rate_change)
+        previous_uk + previous_new_3_average * new_cases_rate * (1 + new_rate_change)
       );
       temp[i].uk_predict = uk_predict;
     }
