@@ -46,7 +46,7 @@ import { getPredictCases, getNewCases, getFatalityRates } from './Predict.js';
   {"name": "22", "it": 17669, "cn": 2981, 'uk': 18100, 'uk_predict': 18152},
   {"name": "23", "it": 18269, "cn": 3012, 'uk': 18738, 'uk_predict': 18856},
   {"name": "24", "it": 18849, "cn": 3042, 'uk': 19506, 'uk_predict': 19619},
-  {"name": "25", "it": 19468, "cn": 3070},
+  {"name": "25", "it": 19468, "cn": 3070, 'uk': 20319, 'uk_predict': 20367},
   {"name": "26", "it": 19899, "cn": 3097},
   {"name": "27", "it": 20465, "cn": 3119},
   {"name": "28", "it": 21067, "cn": 3136},
@@ -110,7 +110,7 @@ const raw_total_cases = [
   {"name": "22", "it": 147577, "cn": 80651, 'uk': 133495, 'uk_predict': 133248},
   {"name": "23", "it": 152271, "cn": 80695, 'uk': 138078, 'uk_predict': 137915},
   {"name": "24", "it": 156363, "cn": 80735, 'uk': 143464, 'uk_predict': 142251},
-  {"name": "25", "it": 159516, "cn": 80754},
+  {"name": "25", "it": 159516, "cn": 80754, 'uk': 148377, 'uk_predict': 146698},
   {"name": "26", "it": 162488, "cn": 80778},
   {"name": "27", "it": 165155, "cn": 80793},
   {"name": "28", "it": 168941, "cn": 80813},
@@ -124,14 +124,14 @@ const raw_total_cases = [
 export const numberOfDaysInTheFuture = 30;
 export const totalCaseStartDay = 6;
 export const fatalityCaseStartDay = 14;
-export const Today = 31 + 24; // 31 days in March + days in April
+export const Today = 31 + 25; // 31 days in March + days in April
 export const TodayTotalIndex = Today - totalCaseStartDay;
 export const TodayFatalityIndex = Today - fatalityCaseStartDay;
 const totalCases = getPredictCases(raw_total_cases, TodayTotalIndex, numberOfDaysInTheFuture);
 const fatalityCases = getPredictCases(raw_death_cases, TodayFatalityIndex, numberOfDaysInTheFuture);
 export const displayTotalCases = totalCases;
 export const displayFatalityCases = fatalityCases;
-export const newCases = getNewCases(totalCases, ['uk', 'uk_predict', 'it'], ['uk', 'uk', 'it']).slice(TodayTotalIndex - 30, TodayTotalIndex + numberOfDaysInTheFuture ); // Past 12 days and Future 10 days
+export const newCases = getNewCases(totalCases, ['uk', 'uk_predict'], ['uk', 'uk']).slice(TodayTotalIndex - 30, TodayTotalIndex + numberOfDaysInTheFuture ); // Past 12 days and Future 10 days
 export const newFatalityCases = getNewCases(fatalityCases, ['uk', 'uk_predict'], ['uk', 'uk']).slice(TodayFatalityIndex - 30,TodayFatalityIndex + numberOfDaysInTheFuture ); // Past 12 days and Future 10 days
 
 export const fatalityRates = getFatalityRates(

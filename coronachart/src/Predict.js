@@ -18,6 +18,7 @@ const getAdjustFactor = (cases, point_latest) => {
   );
 };
 
+//Deprecated
 const getSingleAdjucstFactor = (cases, index) => {
   const factor =
     (cases[index].uk - cases[index - 1].uk) /
@@ -61,8 +62,6 @@ const getRateRunningAverage = (cases, index, regression_count, point_latest) => 
   return current / previous;
 }
 
-
-
 const getNewCasesRate = (cases, point_latest,regression_count,days_before = 0) => {
   let total = 0;
   for (let i = 0; i < regression_count; i++) {
@@ -72,52 +71,40 @@ const getNewCasesRate = (cases, point_latest,regression_count,days_before = 0) =
   return total / regression_count;
 };
 
-const getNewCasesRunningAverage = (cases, ) => {
-
-}
-
 //Predict the cases: following UK new trend.
 export const getPredictCases = (cases, point_latest, predict_days) => {
   let temp = cases;
-  console.log('cases length , i is : ' + cases.length);
-  console.log('predict_days: ' + predict_days);
-
   const bound = cases.length + predict_days;
-  console.log('cases bound , i is : ' + bound);
-
 
   for (let i = 0; i < bound; i++) {
     if (i < point_latest) {
       temp[i] = cases[i];
     } else if (i === point_latest) {
     } else {
-      console.log('hello, i is : ' + i);
 
       if (i > cases.length - 1) {
         const number = parseInt(temp[i-1].name) + 1;
         const date = number > 30 ? number - 30 : number;
         temp.push({'uk_predict': undefined, 'name' : date});
-        console.log('hello, pushing ;' + date);
       }
       const previous_uk = getCase(temp, i - 1, point_latest);
-     // const previous_previous_uk = getCase(temp, i - 2, point_latest);
-      const previous_4_uk = getCase(temp, i - 4, point_latest);
+      const previous_7_uk = getCase(temp, i - 7, point_latest);
+      const previous_new = (previous_uk - previous_7_uk) / 6;
 
-      const previous_new_3_average = (previous_uk - previous_4_uk)/3;
-
-     // const previous_new_uk = previous_uk - previous_previous_uk;
 
       const new_cases_rate = getNewCasesRate(cases, point_latest, 7, 0);
-      const new_cases_rate_previous = getNewCasesRate(
-        cases,
-        point_latest,
-        7,
-        1
-      );
+      const new_cases_rate_previous = getNewCasesRate(cases, point_latest, 7, 1);
+
+      console.log('previous new cases: ' + previous_new);
+      console.log('new_cases_rate: ' + new_cases_rate);
+      console.log('new_cases_rate_previous: ' + new_cases_rate_previous);
 
       const new_rate_change = new_cases_rate - new_cases_rate_previous;
+
+      const adjustFactor = getSingleAdjucstFactor(temp, point_latest);
+
       const uk_predict = Math.ceil(
-        previous_uk + previous_new_3_average * new_cases_rate * (1 + new_rate_change)
+        previous_uk + previous_new * new_cases_rate * (1 + new_rate_change)
       );
       temp[i].uk_predict = uk_predict;
     }
