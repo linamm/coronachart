@@ -1,4 +1,5 @@
 //TODO: refactor this to a generic function.
+//Deprecated
 const getAdjustFactor = (cases, point_latest) => {
   // Give the date closer higher weighing. Give a higher weight if we think the current trend is here to stay, otherwise, give it lower.
   // When unsure, give 0.5. When thinking historical data more important use a value that's less than 0.5. When it is a more representative change. use a value that is higher than 0.5.
@@ -26,7 +27,8 @@ const getSingleAdjucstFactor = (cases, index) => {
   return factor;
 };
 
-//Predict the cases: //Deprecated method using Italy trend to predict UK trend.
+//Predict the cases
+//Deprecated method using Italy trend to predict UK trend.
 export const getPredictCasesItalyTrend = (cases, point_latest) => {
   let temp = cases;
   const adjustFactor = getAdjustFactor(cases, point_latest);
@@ -109,7 +111,6 @@ export const getPredictCases = (cases, point_latest, predict_days) => {
       //   console.log('new_rate_change: ' + new_rate_change);
 
       // }
-
 
       const uk_predict = Math.ceil(
         previous_uk + previous_new * new_cases_rate * (1 + new_rate_change)

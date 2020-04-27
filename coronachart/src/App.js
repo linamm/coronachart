@@ -91,18 +91,18 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (8:20pm, 26th April)
+        Updated (8:20pm, 27th April)
         </div>
 
         
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 27th of April is 157,428, adding 4588 new cases, over 200,000 by the 7th of May and near 300,000 by the beginning of June.
+          The predicted total cases by the 28th of April is 161,748, adding 4595 new cases, over 200,000 by the 7th of May and near 300,000 by the beginning of June.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 27th of April is 21420, adding 688 new fatalities, over 30,000 by the 11th of May, over 40,000 by the end of May.
+          The predicted number of fatalities published on the 28th of April is 21710, adding 618 new fatalities, over 30,000 by the 14th of May, over 40,000 by the beginning of June.
         </b>
       </div>
 
@@ -121,8 +121,6 @@ function App() {
             <Tooltip />
             <Legend />
             <Bar dataKey="uk" fill={colors.uk} name='New Cases UK'/>
-            <Bar dataKey="it" fill={colors.it} name='New Cases Italy'/>
-
             <Bar dataKey="uk_predict" fill={colors.uk_predict} name='New Cases UK Predict' />
             {/* <Bar dataKey="it" fill={colors.it} name='New Cases Italy Predict' /> */}
 
