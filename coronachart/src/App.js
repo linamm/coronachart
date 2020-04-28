@@ -56,7 +56,7 @@ function App() {
       display: "flex",
       flex: 1,
       marginTop: 20,
-      flexDirection: "column"
+      flexDirection: "column",
     },
     app: {
       display: "flex",
@@ -91,18 +91,18 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (8:20pm, 27th April)
+        Updated (8:20pm, 28th April)
         </div>
 
         
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 28th of April is 161,748, adding 4595 new cases, over 200,000 by the 7th of May and near 300,000 by the beginning of June.
+          The predicted total cases by the 29th of April is 165,705, adding 4560 new cases, over 200,000 by the 7th of May and near 300,000 by the beginning of June.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 28th of April is 21710, adding 618 new fatalities, over 30,000 by the 14th of May, over 40,000 by the beginning of June.
+          The predicted number of fatalities published on the 29th of April is 22254, adding 576 new fatalities, over 30,000 by the 15th of May, over 40,000 by the middle of June.
         </b>
       </div>
 
