@@ -51,7 +51,12 @@ export const getPredictCasesItalyTrend = (cases, point_latest) => {
 };
 
 const getCase = (cases, index, point_latest) => {
-  return index > point_latest? cases[index].uk_predict : cases[index].uk;
+  let number = (index > point_latest) ? cases[index].uk_predict : cases[index].uk;
+ // Tempory fix:
+  if (index > (point_latest - 15) && index < point_latest && cases[point_latest].uk === 26097) {
+    number = number + 26097 - 22254;
+  }
+  return number;
 }
 
 const getRateRunningAverage = (cases, index, regression_count, point_latest) => {
@@ -75,7 +80,7 @@ const getNewCasesRate = (cases, point_latest,regression_count,days_before = 0) =
 
 //Predict the cases: following UK new trend.
 export const getPredictCases = (cases, point_latest, predict_days) => {
-  let temp = cases;
+  let temp = [...cases];
   const bound = cases.length + predict_days;
 
   for (let i = 0; i < bound; i++) {
@@ -83,7 +88,6 @@ export const getPredictCases = (cases, point_latest, predict_days) => {
       temp[i] = cases[i];
     } else if (i === point_latest) {
     } else {
-
       if (i > cases.length - 1) {
         const number = parseInt(temp[i-1].name) + 1;
         const date = number > 30 ? number - 30 : number;
@@ -91,12 +95,11 @@ export const getPredictCases = (cases, point_latest, predict_days) => {
       }
       const previous_uk = getCase(temp, i - 1, point_latest);
       const previous_7_uk = getCase(temp, i - 7, point_latest);
+
       const previous_new = (previous_uk - previous_7_uk) / 6;
 
-
-
-      const new_cases_rate = getNewCasesRate(cases, point_latest, 7, 0);
-      const new_cases_rate_previous = getNewCasesRate(cases, point_latest, 7, 1);
+      const new_cases_rate = getNewCasesRate(temp, point_latest, 7, 0);
+      const new_cases_rate_previous = getNewCasesRate(temp, point_latest, 7, 1);
 
       // console.log('previous new cases: ' + previous_new);
       // console.log('new_cases_rate: ' + new_cases_rate);
