@@ -91,21 +91,17 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (00:17pm, 30th April)
-        </div>
-
-        <div style={styles.paragraph}>
-          Due to the number of fatalities starts to include numbers from care home, the model is currently not stable. It will need to run for a few days to be more reliable again.
+        Updated (21:20pm, 30th April)
         </div>
 
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 30th of April is 169678, adding 4457 new cases, over 200,000 by the 8th of May and near 300,000 by the beginning of June.
+          The predicted total cases by the 1st of May is 175882, adding 4629 new cases, over 200,000 by the 7th of May and near 300,000 by the end of May.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 30th of April is 26816, adding 719 new fatalities, over 30,000 by the 5th of May, over 40,000 by 15th of May.
+          The predicted number of fatalities published on the 1st of May is 27404, adding 633 new fatalities, over 30,000 by the 5th of May, over 40,000 by the 17th of May.
         </b>
       </div>
 
