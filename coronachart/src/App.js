@@ -167,7 +167,7 @@ function App() {
             yAxisId={0}
           />
 
-          <Line
+          {/* <Line
             name="Total Cases in Italy"
             type="monotone"
             dataKey="it"
@@ -181,7 +181,7 @@ function App() {
             dataKey="cn"
             stroke={colors.china}
             yAxisId={0}
-          />
+          /> */}
 
           <Line
             name="Total Cases in the UK"
@@ -205,7 +205,7 @@ function App() {
           <YAxis dataKey="uk_predict" />
           <Tooltip />
           <Legend verticalAlign="top" height={36} />
-          <Line
+          {/* <Line
             name="Fatalities in Italy"
             type="monotone"
             dataKey="it"
@@ -218,7 +218,7 @@ function App() {
             dataKey={"cn"}
             stroke={colors.china}
             yAxisId={0}
-          />
+          /> */}
           <Line
             name="Predicted Fatality in the UK"
             type="monotone"
@@ -248,7 +248,7 @@ function App() {
           <YAxis dataKey="uk_predict" />
           <Tooltip />
           <Legend verticalAlign="top" height={36} />
-          <Line
+          {/* <Line
             name="Fatality rate in China"
             type="monotone"
             dataKey="cn"
@@ -261,7 +261,7 @@ function App() {
             dataKey="it"
             stroke={colors.it}
             yAxisId={0}
-          />
+          /> */}
           <Line
             name="Predicted Fatality rate in the UK"
             type="monotone"
