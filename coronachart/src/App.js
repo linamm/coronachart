@@ -279,7 +279,7 @@ function App() {
         </LineChart>
       </div>
 
-      <div style={styles.paragraph}>
+      {/* <div style={styles.paragraph}>
         Italy has 150 cases (2020-02-23), while the UK has 160 cases (2020-03-06). At that
         point, UK is 12 days behind Italy. The data from Italy and UK is aligned from that point.
       </div>
@@ -290,7 +290,7 @@ function App() {
         into account of previous predition errors in order to achieve a more accurate number.
 
         On 18th April, the predition using the above model has been quite off for two days in a row, which indicates that the UK is no longer following the curve set by Italy. The new prediction is based on trend analysis by calculating the running average rate and rate change of the past 7 days of daily new cases and new fatalities.
-      </div>
+      </div> */}
 
       <div style={styles.paragraph}>
         <div>
