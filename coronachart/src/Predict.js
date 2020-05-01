@@ -52,8 +52,9 @@ export const getPredictCasesItalyTrend = (cases, point_latest) => {
 
 const getCase = (cases, index, point_latest) => {
   let number = (index > point_latest) ? cases[index].uk_predict : cases[index].uk;
+  const day_from_spike = 2;
  // Tempory fix:
-  if (index > (point_latest - 15) && index < (point_latest - 1) && cases[point_latest - 1].uk === 26097) {
+  if (index > (point_latest - 15) && index < (point_latest - day_from_spike) && cases[point_latest - day_from_spike].uk === 26097) {
     number = number + 26097 - 22254;
   }
   return number;
@@ -82,6 +83,7 @@ const getNewCasesRate = (cases, point_latest,regression_count,days_before = 0) =
 export const getPredictCases = (cases, point_latest, predict_days) => {
   let temp = [...cases];
   const bound = cases.length + predict_days;
+  const DAYS_IN_MONTH = 31;
 
   for (let i = 0; i < bound; i++) {
     if (i < point_latest) {
@@ -90,7 +92,7 @@ export const getPredictCases = (cases, point_latest, predict_days) => {
     } else {
       if (i > cases.length - 1) {
         const number = parseInt(temp[i-1].name) + 1;
-        const date = number > 30 ? number - 30 : number;
+        const date = number > DAYS_IN_MONTH ? number - DAYS_IN_MONTH : number;
         temp.push({'uk_predict': undefined, 'name' : date});
       }
       const previous_uk = getCase(temp, i - 1, point_latest);
