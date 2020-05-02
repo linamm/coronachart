@@ -53,7 +53,9 @@ export const getPredictCasesItalyTrend = (cases, point_latest) => {
 const getCase = (cases, index, point_latest) => {
   let number = (index > point_latest) ? cases[index].uk_predict : cases[index].uk;
   const day_from_spike = 3;
- // Tempory fix:
+ // Tempory fix due to the goverment changes way of counting number of fatalites on the 29th April.
+ // The predicted number was 22254 and the actual number reported was 26097.
+ // Therefore add the same amount of extra number on the previous days to get the actual increase per day.
   if (index > (point_latest - 15) && index < (point_latest - day_from_spike) && cases[point_latest - day_from_spike].uk === 26097) {
     number = number + 26097 - 22254;
   }
@@ -75,7 +77,6 @@ const getNewCasesRate = (cases, point_latest,regression_count,days_before = 0) =
   for (let i = 0; i < regression_count; i++) {
     total += getRateRunningAverage(cases, point_latest - i - days_before, regression_count, point_latest);
   }
- // console.log('case rate: ' + total/regression_count);
   return total / regression_count;
 };
 
@@ -96,26 +97,14 @@ export const getPredictCases = (cases, point_latest, predict_days) => {
         temp.push({'uk_predict': undefined, 'name' : date});
       }
       const previous_uk = getCase(temp, i - 1, point_latest);
-      const previous_7_uk = getCase(temp, i - 7, point_latest);
+      const previous_8_uk = getCase(temp, i - 8, point_latest);
 
-      const previous_new = (previous_uk - previous_7_uk) / 6;
+      const previous_new = (previous_uk - previous_8_uk) / 7; //Take 7 day average.
 
       const new_cases_rate = getNewCasesRate(temp, point_latest, 7, 0);
       const new_cases_rate_previous = getNewCasesRate(temp, point_latest, 7, 1);
 
-      // console.log('previous new cases: ' + previous_new);
-      // console.log('new_cases_rate: ' + new_cases_rate);
-      // console.log('new_cases_rate_previous: ' + new_cases_rate_previous);
-
       const new_rate_change = new_cases_rate - new_cases_rate_previous;
-
-      // if(cases[i-1].name === '26') {
-      //   console.log('previous_uk: ' + previous_uk);
-      //   console.log('previous_new: ' + previous_new);
-      //   console.log('new_cases_rate: ' + new_cases_rate);
-      //   console.log('new_rate_change: ' + new_rate_change);
-
-      // }
 
       const uk_predict = Math.ceil(
         previous_uk + previous_new * new_cases_rate * (1 + new_rate_change)

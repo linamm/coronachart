@@ -91,17 +91,17 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (7:30pm, 2nd May)
+        Updated (7:50pm, 2nd May)
         </div>
 
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 3rd of May is 187170, adding 4910 new cases, over 200,000 by the 6th of May and near 300,000 by the 25th of May.
+          The predicted total cases by the 3rd of May is 187107, adding 4847 new cases, over 200,000 by the 6th of May and near 300,000 by the 26th of May.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 3rd of May is 28783, adding 652 new fatalities, over 30,000 by the 5th of May, over 40,000 by the 17th of May.
+          The predicted number of fatalities published on the 3rd of May is 28755, adding 624 new fatalities, over 30,000 by the 5th of May, over 40,000 by the 18th of May.
         </b>
       </div>
 
