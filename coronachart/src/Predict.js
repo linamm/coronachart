@@ -52,7 +52,7 @@ export const getPredictCasesItalyTrend = (cases, point_latest) => {
 
 const getCase = (cases, index, point_latest) => {
   let number = (index > point_latest) ? cases[index].uk_predict : cases[index].uk;
-  const day_from_spike = 2;
+  const day_from_spike = 3;
  // Tempory fix:
   if (index > (point_latest - 15) && index < (point_latest - day_from_spike) && cases[point_latest - day_from_spike].uk === 26097) {
     number = number + 26097 - 22254;
