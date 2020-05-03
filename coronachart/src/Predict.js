@@ -52,7 +52,7 @@ export const getPredictCasesItalyTrend = (cases, point_latest) => {
 
 const getCase = (cases, index, point_latest) => {
   let number = (index > point_latest) ? cases[index].uk_predict : cases[index].uk;
-  const day_from_spike = 3;
+  const day_from_spike = 4;
  // Tempory fix due to the goverment changes way of counting number of fatalites on the 29th April.
  // The predicted number was 22254 and the actual number reported was 26097.
  // Therefore add the same amount of extra number on the previous days to get the actual increase per day.
