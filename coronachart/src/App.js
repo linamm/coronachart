@@ -87,13 +87,12 @@ function App() {
   return (
     <div style={styles.app}>
       <div style={styles.headline}>
-        <b> Stay Home Save Lives</b>
+        <b> Zero COVID-19, True Freedom</b>
       </div>
 
       <div style={styles.paragraph}>
-        Updated (7:50pm, 2nd May)
-        </div>
-
+        Updated (2:40pm, 3nd May)
+        Only zero new cases of COVID-19 will give our true freedom back. There are still between 4000 - 5000 new cases per day, a gradual coming out of lock down will not save the economy. As long as there is still new COVID-19 cases, the NHS frontline heros cannot stop fighting the war, the vulnerables cannot participate in society and the economy will not be moving. Every single decision made by every individual will be affected by the fact that there is still new cases of COVID-19. The day we hear from the media that 'there is zero cases of new COVID-19 cases', is the day, we could all say 'Hooray!' and resume normality as it was.
       <div style={styles.paragraph}>
         <b>
           The predicted total cases by the 3rd of May is 187107, adding 4847 new cases, over 200,000 by the 6th of May and near 300,000 by the 26th of May.
