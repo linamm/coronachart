@@ -96,7 +96,7 @@ function App() {
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 6th of May is 199876, adding 4888 new cases, very close to the 200,000 mark and near 300,000 by the 27th of May. Giving the fatality rate is arround 15% which is a stark contrast to the 3% like in Korean and China, the actual infected cases could well exceeding 1 million.
+          The predicted total cases by the 6th of May is 199876, adding 4888 new cases, very close to the 200,000 mark and near 300,000 by the 27th of May.
         </b>
       </div>
       <div style={styles.paragraph}>
