@@ -91,17 +91,17 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (7:00pm, 4th May)
+        Updated (9:30pm, 5th May)
         Only zero new cases of COVID-19 will give our true freedom back. There are still between 4000 - 5000 new cases per day, a gradual coming out of lock down will not save the economy. As long as there is still new COVID-19 cases, the NHS frontline heros cannot stop fighting the war, the vulnerables cannot participate in society and the economy will not be moving. Every single decision made by every individual will be affected by the fact that there is still new cases of COVID-19. The day we hear from the media that 'there is zero cases of new COVID-19 cases', is the day, we could all say 'Hooray!' and resume normality as it was.
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 5th of May is 195384, adding 4800 new cases, over 200,000 by the 6th of May and near 300,000 by the 27th of May.
+          The predicted total cases by the 6th of May is 199876, adding 4888 new cases, very close to the 200,000 mark and near 300,000 by the 27th of May. Giving the fatality rate is arround 15% which is a stark contrast to the 3% like in Korean and China, the actual infected cases could well exceeding 1 million.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 5th of May is 29336, adding 602 new fatalities, over 30,000 by the 7th of May, over 40,000 by the 21st of May.
+          The predicted number of fatalities published on the 6th of May is 30056, adding 629 new fatalities, over 40,000 by the 20th of May.
         </b>
       </div>
 
