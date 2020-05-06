@@ -91,17 +91,17 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (9:30pm, 5th May)
-        Only zero new cases of COVID-19 will give our true freedom back. There are still between 4000 - 5000 new cases per day, a gradual coming out of lock down will not save the economy. As long as there is still new COVID-19 cases, the NHS frontline heros cannot stop fighting the war, the vulnerables cannot participate in society and the economy will not be moving. Every single decision made by every individual will be affected by the fact that there is still new cases of COVID-19. The day we hear from the media that 'there is zero cases of new COVID-19 cases', is the day, we could all say 'Hooray!' and resume normality as it was.
+        Updated (9:30pm, 6th May)
+        Only zero new cases of COVID-19 will give our true freedom back. As long as there is still new COVID-19 cases, the NHS frontline heros cannot stop fighting the war, the vulnerables cannot participate in society and the economy will not be moving. Every single decision made by every individual will be affected by the fact that there is still new cases of COVID-19. The day we hear from the media that 'there is zero cases of new COVID-19 cases', is the day, we could all say 'Hooray!' and resume normality as it was.
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 6th of May is 199876, adding 4888 new cases, very close to the 200,000 mark and near 300,000 by the 27th of May.
+          The predicted total cases by the 7th of May is 206373, adding 5272 new cases and near 300,000 by the 25th of May.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 6th of May is 30056, adding 629 new fatalities, over 40,000 by the 20th of May.
+          The predicted number of fatalities published on the 7th of May is 30503, adding 427 new fatalities, over 35,000 by the 26th of May.
         </b>
       </div>
 
