@@ -91,19 +91,17 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (22:20am, 9th May)
+        Updated (20:40am, 10th May)
         Only zero new cases of COVID-19 will give our true freedom back. As long as there are still new COVID-19 cases, the NHS frontline heros cannot stop fighting the war, the vulnerables cannot participate in society and the economy will not be moving. Every single decision made by every individual will be affected by the fact that there are still new cases of COVID-19. The day we hear from the media that 'there is zero cases of new COVID-19 cases', is the day, we could all say 'Hooray!' and resume normality as it was.
-
-        "Keep going, we aren't done yet!" - Dominic Raab - 7th May
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 10th of May is 219943, adding 4683 new cases and over 300,000 by the 28th of May.
+          The predicted total cases by the 11th of May is 223811, adding 4628 new cases and over 300,000 by the 28th of May.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 10th of May is 32033, adding 446 new fatalities, over 40,000 by the beginning of June.
+          The predicted number of fatalities published on the 11th of May is 32298, adding 443 new fatalities, over 40,000 by early June.
         </b>
       </div>
 
