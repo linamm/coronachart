@@ -96,12 +96,12 @@ function App() {
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 11th of May is 223811, adding 4628 new cases and over 300,000 by the 28th of May.
+          The predicted total cases by the 12th of May is 227687, adding 4627 new cases and over 300,000 by the end of May.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 11th of May is 32298, adding 443 new fatalities, over 40,000 by early June.
+          The predicted number of fatalities published on the 12th of May is 32497, adding 432 new fatalities, over 40,000 by mid June.
         </b>
       </div>
 
