@@ -64,6 +64,7 @@ import { getPredictCases, getNewCases, getFatalityRates } from './Predict.js';
   {"name": "10", "uk": 31855, 'uk_predict': 32033},
   {"name": "11", "uk": 32065, 'uk_predict': 32298},
   {"name": "12", "uk": 32692, 'uk_predict': 32497},
+  {"name": "13", "uk": 33186, 'uk_predict': 33112},
  
 ];
 
@@ -136,12 +137,13 @@ const raw_total_cases = [
   {"name": "10", "uk": 219183, "uk_predict": 219943},
   {"name": "11", "uk": 223060, 'uk_predict': 223811},
   {"name": "12", "uk": 226463, 'uk_predict': 227687},
+  {"name": "13", "uk": 229705, 'uk_predict': 230888},
 ];
 
 export const numberOfDaysInTheFuture = 30;
 export const totalCaseStartDay = 6;
 export const fatalityCaseStartDay = 14;
-export const DaysInMay = 12;
+export const DaysInMay = 13;
 export const Today = 31 + 30 + DaysInMay; // 31 days in March + days in April + days in May
 export const TodayTotalIndex = Today - totalCaseStartDay;
 export const TodayFatalityIndex = Today - fatalityCaseStartDay;
