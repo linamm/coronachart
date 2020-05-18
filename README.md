@@ -18,3 +18,5 @@ By comparison, it can highlight the issues, wether it is under testing or capabi
 
 It is a new virus, any modelling would be speculative to some degree. Social behavior modelling could also be full of assumptions. The best model could be just right in front of us, i.e. history... real events played out in real countries.
 
+From 18th April, the modelling is based on calculating the 7 days running average of new cases and the rate of changes of new cases.
+
