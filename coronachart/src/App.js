@@ -99,12 +99,12 @@ function App() {
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 20th of May is 251,856, adding 3038 new cases and over 300,000 by early June.
+          The predicted total cases by the 20th of May is 251,856, adding 3,038 new cases and over 300,000 by early June.
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 20th of May is 35708, adding 367 new fatalities, over 40,000 by early June.
+          The predicted number of fatalities published on the 20th of May is 35,708, adding 367 new fatalities, over 40,000 by early June.
         </b>
       </div>
 
