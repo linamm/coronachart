@@ -150,7 +150,7 @@ const raw_total_cases = [
   {"name": "17", "uk": 243695, 'uk_predict': 243585},
   {"name": "18", "uk": 246406, 'uk_predict': 247058},
   {"name": "19", "uk": 248818, 'uk_predict': 249569},
-  {"name": "20", "uk": 248818, 'uk_predict': 251856},
+  {"name": "20", "uk": 248818, 'uk_predict': 251856}, // The published data on government website is 248,293, actually less than yesterday, which is impossible, so, there must be mistakes in today or yesterday's figure. Therefore, take yesterdays figure here for consistency. 
 ];
 
 export const numberOfDaysInTheFuture = 30;
