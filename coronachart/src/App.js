@@ -91,20 +91,19 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (22:30, 19th May)
+        Updated (21:15, 20th May)
         Only zero new cases of COVID-19 will give our true freedom back. As long as there are still new COVID-19 cases, the NHS frontline heros cannot stop fighting the war, the vulnerables cannot participate in society and the economy will not be moving. Every single decision made by every individual will be affected by the fact that there are still new cases of COVID-19. The day we hear from the media that 'there is zero cases of new COVID-19 cases', is the day, we could all say 'Hooray!' and resume normality as it was.
       </div>
       <div style={styles.paragraph}>
-          The next day prediction is very accurate for mid week. The 30 day predition has not changed much in the past 2 weeks, which shows this prediction model is now quite reliable.
-      </div>
-      <div style={styles.paragraph}>
         <b>
-          The predicted total cases by the 20th of May is 251,856, adding 3,038 new cases and over 300,000 by early June.
+          The predicted total cases will be over 300,000 by mid June and the predicted number of fatalities will be over 40,000 by early June.
+          Refer to the graph for daily prediction breakdown..
+          33
         </b>
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted number of fatalities published on the 20th of May is 35,708, adding 367 new fatalities, over 40,000 by early June.
+          
         </b>
       </div>
 
