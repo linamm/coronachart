@@ -97,8 +97,7 @@ function App() {
       <div style={styles.paragraph}>
         <b>
           The predicted total cases will be over 300,000 by mid June and the predicted number of fatalities will be over 40,000 by early June.
-          Refer to the graph for daily prediction breakdown..
-          33
+          Refer to the graph for daily prediction breakdown.
         </b>
       </div>
       <div style={styles.paragraph}>
