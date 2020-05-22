@@ -73,6 +73,7 @@ import { getPredictCases, getNewCases, getFatalityRates } from './Predict.js';
   {"name": "19", "uk": 35341, 'uk_predict': 35176},
   {"name": "20", "uk": 35704, 'uk_predict': 35708},
   {"name": "21", "uk": 36042, 'uk_predict': 36054},
+  {"name": "22", "uk": 36393, 'uk_predict': 36379},
 ];
 
 const raw_total_cases = [
@@ -153,12 +154,13 @@ const raw_total_cases = [
   {"name": "19", "uk": 248818, 'uk_predict': 249569},
   {"name": "20", "uk": 248818, 'uk_predict': 251856}, // The published data on government website is 248,293, actually less than yesterday, which is impossible, so, there must be mistakes in today or yesterday's figure. Therefore, take yesterdays figure here for consistency.
   {"name": "21", "uk": 250908, 'uk_predict': 251379},
+  {"name": "22", "uk": 254195	, 'uk_predict': 252209},
 ];
 
 export const numberOfDaysInTheFuture = 30;
 export const totalCaseStartDay = 6;
 export const fatalityCaseStartDay = 14;
-export const DaysInMay = 21;
+export const DaysInMay = 22;
 export const Today = 31 + 30 + DaysInMay; // 31 days in March + days in April + days in May
 export const TodayTotalIndex = Today - totalCaseStartDay;
 export const TodayFatalityIndex = Today - fatalityCaseStartDay;
