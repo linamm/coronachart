@@ -1,5 +1,6 @@
 # coronachart
 Prediction and Analysis of coronavirus in the UK
+http://coronachart.deltagain.co.uk/
 
 ## graph of number of total cases
 This graph shows the total number of cases of coronavirus in the UK, Italy and China at similar stage.
@@ -17,4 +18,6 @@ By comparison, it can highlight the issues, wether it is under testing or capabi
 ### Theory
 
 It is a new virus, any modelling would be speculative to some degree. Social behavior modelling could also be full of assumptions. The best model could be just right in front of us, i.e. history... real events played out in real countries.
+
+From 18th April, the modelling is based on calculating the 7 days running average of new cases and the rate of changes of new cases.
 
