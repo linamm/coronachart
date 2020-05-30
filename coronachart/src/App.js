@@ -96,7 +96,7 @@ function App() {
       </div>
       <div style={styles.paragraph}>
         <b>
-          The predicted total cases will be over 300,000 by mid June and the predicted number of fatalities will be over 40,000 by mid June.
+          The predicted total cases will be over 300,000 by mid June and the predicted number of fatalities will be over 40,000 by the 6th of June. There will be 400,000 total cases and 50,000 fatalities by the end of July.
           Refer to the graph for daily prediction breakdown.
         </b>
       </div>
