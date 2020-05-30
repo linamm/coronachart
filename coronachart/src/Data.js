@@ -186,6 +186,6 @@ export const newCases = getNewCases(totalCases, ['uk', 'uk_predict'], ['uk', 'uk
 export const newFatalityCases = getNewCases(fatalityCases, ['uk', 'uk_predict'], ['uk', 'uk']).slice(TodayFatalityIndex - 60,TodayFatalityIndex + numberOfDaysInTheFuture ); // Past 12 days and Future 30 days
 
 export const fatalityRates = getFatalityRates(
-  fatalityCases.slice(TodayFatalityIndex - 30, TodayFatalityIndex + numberOfDaysInTheFuture),
-  totalCases.slice(TodayTotalIndex - 30, TodayTotalIndex + numberOfDaysInTheFuture),
+  fatalityCases.slice(TodayFatalityIndex - 60, TodayFatalityIndex + numberOfDaysInTheFuture),
+  totalCases.slice(TodayTotalIndex - 60, TodayTotalIndex + numberOfDaysInTheFuture),
   ['uk', 'it', 'uk_predict', 'cn']);
