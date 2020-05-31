@@ -82,6 +82,7 @@ import { getPredictCases, getNewCases, getFatalityRates } from './Predict.js';
   {"name": "28", "uk": 37837, 'uk_predict': 37702},
   {"name": "29", "uk": 38161, 'uk_predict': 38086},
   {"name": "30", "uk": 38376, 'uk_predict': 38404},
+  {"name": "31", "uk": 38489, 'uk_predict': 38613},
 ];
 
 const raw_total_cases = [
@@ -171,6 +172,7 @@ const raw_total_cases = [
   {"name": "28", "uk": 269127, 'uk_predict': 269967},
   {"name": "29", "uk": 271222	, 'uk_predict': 271769},
   {"name": "30", "uk": 272826, 'uk_predict': 273635},
+  {"name": "31", "uk": 274762, 'uk_predict': 275031},
 ];
 
 export const numberOfDaysInTheFuture = 60;
