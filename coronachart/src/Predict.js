@@ -85,7 +85,7 @@ const getNewCasesRate = (cases, point_latest,regression_count,days_before = 0) =
 export const getPredictCases = (cases, point_latest, predict_days) => {
   let temp = [...cases];
   const bound = cases.length + predict_days;
-  const DAYS_IN_MONTH = 31;
+  const DAYS_IN_MONTH = 30;
 
   for (let i = 0; i < bound; i++) {
     if (i < point_latest) {
