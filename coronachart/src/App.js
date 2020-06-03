@@ -91,7 +91,7 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (00:40am, 3rd June)
+        Updated (20:40am, 3rd June)
         Only zero new cases of COVID-19 will give our true freedom back. As long as there are still new COVID-19 cases, the NHS frontline heros cannot stop fighting the war, the vulnerables cannot participate in society and the economy will not be moving. Every single decision made by every individual will be affected by the fact that there are still new cases of COVID-19. The day we hear from the media that 'there is zero cases of new COVID-19 cases', is the day, we could all say 'Hooray!' and resume normality as it was.
       </div>
       <div style={styles.paragraph}>
