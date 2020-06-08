@@ -91,11 +91,12 @@ function App() {
       </div>
 
       <div style={styles.paragraph}>
-        Updated (18:55am, 8th June)
+        Updated (19:09, 8th June)
         Only zero new cases of COVID-19 will give our true freedom back. As long as there are still new COVID-19 cases, the NHS frontline heros cannot stop fighting the war, the vulnerables cannot participate in society and the economy will not be moving. Every single decision made by every individual will be affected by the fact that there are still new cases of COVID-19. The day we hear from the media that 'there is zero cases of new COVID-19 cases', is the day, we could all say 'Hooray!' and resume normality as it was.
       </div>
       <div style={styles.paragraph}>
         <b>
+          It looks like the situation will roughly return to the pre lock-down level by mid July.
           The predicted total cases will be over 300,000 by mid June. There will be 350,000 total cases by mid August and 45,000 fatalities by mid August.
           Refer to the graph for daily prediction breakdown.
         </b>
